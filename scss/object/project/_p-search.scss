@@ -1,0 +1,49 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+// ==========================================================================
+// p-search
+// ==========================================================================
+
+.p-search {
+    margin-top: rem(80);
+    @include sp {
+        margin-top: rem(50);
+    }
+}
+
+// ==========================================================================
+// p-search-list
+// ==========================================================================
+
+.p-search-list {
+    padding-block: rem(66) rem(210);
+    @include sp {
+        padding-block: rem(36) rem(203);
+    }
+}
+
+.p-search-list__keyword {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: rem(18);
+    line-height: calc(30 / 18);
+}
+
+.p-search-list__title span {
+    font-weight: 600;
+}
+
+.p-search-list__items {
+    margin-top: rem(40);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(70);
+    @include sp {
+        margin-top: rem(42);
+        row-gap: rem(39);
+    }
+}

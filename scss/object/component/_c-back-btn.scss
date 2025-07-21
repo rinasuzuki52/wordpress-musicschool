@@ -1,0 +1,33 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+
+/* --------------
+トップへ戻るボタン
+-----------------*/
+
+.c-back-btn {
+    display: flex;
+    width: rem(68);
+    height: rem(68);
+    // background-color: #7f7f7f;
+    background-color: rgba(0, 0, 0, 0.502);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    right: rem(116);
+    z-index: 999;
+    cursor: pointer;
+    @include sp {
+        right: rem(20);
+    }
+     /* ホバー時のフェード */
+    &:hover {
+     opacity: 0.7 !important;
+    }
+}
+
+.c-back-btn__icon {
+    width: rem(27);
+}

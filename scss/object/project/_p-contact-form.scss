@@ -1,0 +1,188 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+// ==========================================================================
+// p-contact-form
+// ==========================================================================
+
+.p-contact-form__area {
+    padding-block: rem(68) rem(100);
+    @include sp {
+        padding-block: rem(47) rem(108);
+    }
+}
+
+.p-contact-form__text {
+    width: 100%;
+    text-align: center;
+    font-size: rem(18);
+    line-height: calc(30 / 18);
+    @include sp {
+        text-align: left;
+        font-size: rem(16);
+        line-height: calc(30 / 16);
+    }
+}
+
+.p-contact-form__block {
+    margin-top: rem(64);
+    width: 100%;
+    @include sp {
+        margin-top: rem(32);
+    }
+}
+
+// ==========================================================================
+// p-form
+// ==========================================================================
+
+.p-form__group {
+    display: flex;
+    margin-bottom: rem(30);
+    @include sp {
+        flex-direction: column;
+        margin-bottom: rem(13);
+    }
+}
+
+.p-form__group2 {
+    margin-bottom: rem(26);
+    @include sp {
+        margin-bottom: rem(7);
+    }
+}
+
+.p-form__group dt {
+    width: rem(170);
+}
+
+.p-form__group dd {
+    flex: 1;
+}
+
+.p-form__label {
+    display: flex;
+    font-size: rem(20);
+    line-height: calc(33 / 20);
+    font-weight: 500;
+    padding-top: rem(7);
+    @include sp {
+        font-size: rem(16);
+        line-height: calc(33 / 16);
+        padding-top: 0;
+        padding-bottom: rem(2);
+    }
+}
+
+.p-form__control {
+    width: 100%;
+    height: rem(40);
+    border: solid rem(0.5) $font-color1;
+    font-size: rem(15);
+    line-height: calc(33 / 15);
+    padding: rem(3) rem(20);
+    cursor: pointer;
+}
+
+.p-form__check {
+    line-height: calc(30 / 20);
+    padding-top: 0;
+    @include sp {
+        line-height: calc(33 / 16);
+    }
+}
+
+.p-form__checkboxes {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: rem(10);
+    margin-top: rem(-4);
+}
+
+.p-form__checkbox {
+    display: flex;
+}
+
+.p-form__checkbox input {
+    cursor: pointer;
+}
+
+.p-form__checkbox span {
+    font-size: rem(18);
+    line-height: calc(30 / 18);
+    position: relative;
+    padding-left: rem(40);
+    cursor: pointer;
+    @include sp {
+        font-size: rem(16);
+        line-height: calc(30 / 16);
+        padding-left: rem(30);
+    }
+}
+
+.p-form__checkbox span::before {
+    content: "";
+    width: rem(20);
+    height: rem(20);
+    background: $font-color2;
+    border: rem(0.5) solid $font-color1;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 9;
+}
+
+.p-form__checkbox span::after {
+    content: "";
+    width: rem(17);
+    height: rem(9);
+    border-left: rem(3) solid $main-color;
+    border-bottom: rem(4) solid $main-color;
+    position: absolute;
+    top: 45%;
+    left: rem(2);
+    transform: translateY(-50%) rotate(-55deg);
+    display: none;
+    z-index: 10;
+}
+
+.p-form__checkbox input:checked + span::after {
+  display: block;
+}
+
+.p-form__textarea {
+    width: 100%;
+    background-color: $font-color2;
+    min-height: rem(300);
+    resize: vertical;
+    padding: rem(13) rem(20);
+    font-size: rem(15);
+    line-height: calc(33 / 15);
+    border: solid rem(0.5) $font-color1;
+    @include sp {
+        min-height: rem(190);
+        height: rem(190);
+        line-height: calc(25 / 15);
+    }
+}
+
+.p-form__submit {
+    display: flex;
+    justify-content: center;
+    margin-top: rem(50);
+}
+
+.p-form__btn {
+    width: rem(250);
+    height: rem(50);
+    font-size: rem(25);
+    line-height: calc(33 / 25);
+    @include sp {
+        width: rem(335);
+        font-size: rem(20);
+        line-height: calc(26 / 20);
+    }
+}

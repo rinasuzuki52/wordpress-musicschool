@@ -1,0 +1,156 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+// ==========================================================================
+// c-related
+// ==========================================================================
+
+.c-related {
+    margin-top: rem(94);
+    @include sp {
+        margin-top: rem(62);
+    }
+}
+
+.c-related__label {
+    background-color: $font-color1;
+    color: $font-color2;
+    font-size: rem(18);
+    font-weight: 600;
+    line-height: calc(33 / 18);
+    padding: rem(9) 0 rem(8) rem(30);
+    text-align: left;
+    @include sp {
+        text-align: center;
+        padding: rem(10) 0 rem(7) 0;
+    }
+}
+
+.c-related__list {
+    margin-top: rem(30);
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(30);
+    @include sp {
+        margin-top: rem(20);
+        row-gap: rem(20);
+    }
+}
+
+.c-related__wrap {
+    width: 100%;
+    display: flex;
+    column-gap: rem(30);
+    transition: all 0.5s ease;
+    &:hover {
+      opacity: 0.7;
+    }
+    @include sp {
+        column-gap: rem(20);
+    }
+}
+
+.c-related__right {
+    position: relative;
+    width: rem(260);
+    @include sp {
+        width: rem(160);
+    }
+}
+
+.c-related__right2 {
+    width: rem(200);
+    @include sp {
+        width: rem(160);
+    }
+}
+
+.c-related__image {
+    width: rem(260);
+    @include sp {
+        width: 100%;
+    }
+}
+
+.c-related__image2 {
+    width: rem(200);
+    @include sp {
+        width: 100%;
+    }
+}
+
+.c-related__image img {
+    aspect-ratio: 260 / 183;
+    object-fit: cover;
+    @include sp {
+        aspect-ratio: 160 / 113;
+    }
+}
+
+.c-related__image2 img {
+    aspect-ratio: 200 / 140;
+    object-fit: cover;
+    @include sp {
+        aspect-ratio: 160 / 110;
+    }
+}
+
+.c-related__caption {
+    min-width: rem(100);
+    @include sp {
+        width: rem(80);
+    }
+}
+
+.c-related__caption2 {
+    width: rem(80);
+}
+
+.c-related__textarea {
+    flex: 1;
+}
+
+.c-related__textarea2 {
+    @include sp {
+        padding-top: rem(8);
+    }
+}
+
+.c-related__title {
+    font-size: rem(20);
+    line-height: calc(25 / 20);
+    font-weight: 600;
+    // ３行以上は省略
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    @include sp {
+        font-size: rem(17);
+        line-height: calc(28 / 17);
+    }
+}
+
+.c-related__time {
+    display: inline-block;
+    font-size: rem(17);
+    line-height: calc(30 / 17);
+    margin-top: rem(13);
+    padding-left: rem(4);
+    @include sp {
+        margin-top: rem(3);
+        padding-left: 0;
+    }
+}
+
+.c-list-item__article {
+    font-size: rem(18);
+    line-height: calc(30 / 18);
+    margin-top: rem(11);
+    @include sp {
+        font-size: rem(16);
+        line-height: calc(30 / 16);
+        margin-top: rem(8);
+    }
+}

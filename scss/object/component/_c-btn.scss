@@ -1,0 +1,24 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+
+/* --------------
+ボタン
+-----------------*/
+
+.c-btn {
+    color: $font-color2; 
+    background-color: $main-color;
+    border: $main-color solid;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+     color: $main-color;
+     background-color: $font-color2;
+     }
+ }

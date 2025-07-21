@@ -1,0 +1,79 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+
+/* --------------
+c-pagination
+-----------------*/
+
+.c-pagination {
+    margin-top: rem(72);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    @include sp {
+        margin-top: rem(59);
+    }
+}
+
+.c-pagination__item {
+    display: block;
+    margin-right: rem(10);
+    width: rem(50);
+    height: rem(50);
+    border: rem(1) solid $font-color1;
+    @include sp {
+        margin-right: rem(5);
+        width: rem(44);
+        height: rem(44);
+    }
+}
+
+.c-pagination__item:last-child {
+    margin-right: 0;
+}
+
+.c-pagination__item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: rem(18);
+    font-weight: 600;
+    line-height: calc(30 / 18);
+    transition: all 0.5s ease;
+    @include sp {
+        font-size: rem(16);
+        line-height: calc(28 / 16);
+    }
+    &:hover {
+        background-color: $font-color1;
+        color: $font-color2;
+    }
+}
+
+.c-pagination__active {
+    background-color: $font-color1;
+    color: $font-color2;
+    transition: none;
+}
+
+.c-pagination__active a {
+    cursor: default;
+}
+
+.c-pagination__disable {
+    display: flex;
+    align-items: center; // 垂直方向中央
+    justify-content: center; // 水平方向中央
+    font-size: rem(18);
+    margin-inline:rem(10) rem(20);
+    @include sp {
+        font-size: rem(16);
+        margin-inline: rem(7) rem(12);
+    }
+}
