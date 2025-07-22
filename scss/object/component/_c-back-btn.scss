@@ -22,6 +22,7 @@
     right: rem(116);
     z-index: 999;
     cursor: pointer;
+    transition: .3s ease;
     @include sp {
         right: rem(20);
     }
