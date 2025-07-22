@@ -745,7 +745,7 @@ c-title2(h2)
   right: 7.25rem;
   z-index: 999;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: opacity 0.3s ease;
   /* ホバー時のフェード */
 }
 @media (max-width: 767px) {
