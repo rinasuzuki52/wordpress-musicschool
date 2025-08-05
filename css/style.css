@@ -621,6 +621,43 @@ img {
 }
 
 /* --------------
+トップへ戻るボタン
+-----------------*/
+.c-back-btn {
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  width: 4.25rem;
+  height: 4.25rem;
+  background-color: rgba(0, 0, 0, 0.502);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  right: 7.25rem;
+  z-index: 999;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  /* ホバー時のフェード */
+}
+@media (max-width: 767px) {
+  .c-back-btn {
+    right: 1.25rem;
+  }
+}
+.c-back-btn:hover {
+  opacity: 0.7 !important;
+}
+
+.c-back-btn.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.c-back-btn__icon {
+  width: 1.6875rem;
+}
+
+/* --------------
 ボタン
 -----------------*/
 .c-btn {
@@ -727,43 +764,6 @@ c-title2(h2)
   .c-caption {
     width: 5.625rem;
   }
-}
-
-/* --------------
-トップへ戻るボタン
------------------*/
-.c-back-btn {
-  opacity: 0;
-  visibility: hidden;
-  display: flex;
-  width: 4.25rem;
-  height: 4.25rem;
-  background-color: rgba(0, 0, 0, 0.502);
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  right: 7.25rem;
-  z-index: 999;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-  /* ホバー時のフェード */
-}
-@media (max-width: 767px) {
-  .c-back-btn {
-    right: 1.25rem;
-  }
-}
-.c-back-btn:hover {
-  opacity: 0.7 !important;
-}
-
-.c-back-btn.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-.c-back-btn__icon {
-  width: 1.6875rem;
 }
 
 /* --------------
