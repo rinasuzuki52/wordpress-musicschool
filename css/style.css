@@ -743,12 +743,11 @@ c-title2(h2)
 /* --------------
 キャプション
 -----------------*/
-.c-caption {
+.c-category {
   position: absolute;
   top: 0;
   left: 0;
   height: 1.875rem;
-  min-width: 5rem;
   padding-inline: 0.625rem;
   display: flex;
   justify-content: center;
@@ -759,11 +758,6 @@ c-title2(h2)
   line-height: 1.6666666667;
   font-weight: 600;
   z-index: 99;
-}
-@media (max-width: 767px) {
-  .c-caption {
-    width: 5.625rem;
-  }
 }
 
 /* --------------
@@ -997,17 +991,17 @@ c-side-title
   }
 }
 
-.c-related__caption {
+.p-related__category {
+  min-width: 5rem;
+}
+
+.p-related__category2 {
   min-width: 6.25rem;
 }
 @media (max-width: 767px) {
-  .c-related__caption {
-    width: 5rem;
+  .p-related__category2 {
+    min-width: 5rem;
   }
-}
-
-.c-related__caption2 {
-  width: 5rem;
 }
 
 .c-related__textarea {
@@ -1886,8 +1880,14 @@ c-side-title
   }
 }
 
-.p-blog-card__caption {
+.p-blog-card__category {
   padding-block: 0.15625rem;
+  min-width: 5rem;
+}
+@media (max-width: 767px) {
+  .p-blog-card__category {
+    min-width: 5.625rem;
+  }
 }
 
 .p-header {
@@ -2654,6 +2654,15 @@ c-side-title
   flex: 1;
 }
 
+.p-list-item__category {
+  min-width: 5rem;
+}
+@media (max-width: 767px) {
+  .p-list-item__category {
+    min-width: 5.625rem;
+  }
+}
+
 .p-list-item__title {
   font-size: 1.25rem;
   line-height: 1.25;
@@ -2724,12 +2733,12 @@ c-side-title
   }
 }
 
-.p-blog-details__caption {
-  width: 5rem;
+.p-blog-details__category {
+  min-width: 5rem;
 }
 @media (max-width: 767px) {
-  .p-blog-details__caption {
-    width: 5.625rem;
+  .p-blog-details__category {
+    min-width: 5.625rem;
   }
 }
 
@@ -3470,8 +3479,13 @@ c-side-title
   }
 }
 
-.p-result-section__caption {
+.p-result-section__category {
   min-width: 6.25rem;
+}
+@media (max-width: 767px) {
+  .p-result-section__category {
+    min-width: 5.625rem;
+  }
 }
 
 .p-result-section__texttitle {
@@ -3519,8 +3533,8 @@ c-side-title
   width: 100%;
 }
 
-.p-details__caption {
-  width: 6.25rem;
+.p-details__category {
+  min-width: 6.25rem;
 }
 
 .p-details__title {

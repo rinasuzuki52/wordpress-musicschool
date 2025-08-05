@@ -77,6 +77,13 @@
     flex: 1;
 }
 
+.p-list-item__category {
+    min-width: rem(80);
+    @include sp {
+       min-width: rem(90);
+    }
+}
+
 .p-list-item__title {
     font-size: rem(20);
     line-height: calc(25 / 20);

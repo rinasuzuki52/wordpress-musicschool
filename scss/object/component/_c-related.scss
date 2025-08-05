@@ -96,15 +96,15 @@
     }
 }
 
-.c-related__caption {
-    min-width: rem(100);
-    @include sp {
-        width: rem(80);
-    }
+.p-related__category {
+    min-width: rem(80);
 }
 
-.c-related__caption2 {
-    width: rem(80);
+.p-related__category2 {
+    min-width: rem(100);
+    @include sp {
+        min-width: rem(80);
+    }
 }
 
 .c-related__textarea {

@@ -29,10 +29,10 @@
   }
 }
 
-.p-blog-details__caption {
-    width: rem(80);
+.p-blog-details__category {
+    min-width: rem(80);
     @include sp {
-      width: rem(90);
+      min-width: rem(90);
     }
 }
 

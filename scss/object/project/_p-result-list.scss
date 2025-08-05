@@ -54,8 +54,11 @@
     }
 }
 
-.p-result-section__caption {
+.p-result-section__category {
     min-width: rem(100);
+    @include sp {
+        min-width: rem(90);
+    }
 }
 
 .p-result-section__texttitle {

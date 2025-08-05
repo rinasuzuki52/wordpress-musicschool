@@ -6,12 +6,11 @@
 キャプション
 -----------------*/
 
-.c-caption {
+.c-category {
   position: absolute;
   top: 0;
   left: 0;
   height: rem(30);
-  min-width: rem(80);
   padding-inline: rem(10);
   display: flex;
   justify-content: center;
@@ -22,9 +21,6 @@
   line-height: calc(25 / 15);
   font-weight: 600;
   z-index: 99;
-  @include sp {
-    width: rem(90);
-  }
 }
 
 

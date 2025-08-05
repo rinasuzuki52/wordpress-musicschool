@@ -795,6 +795,10 @@
     }
 }
 
-.p-blog-card__caption {
+.p-blog-card__category {
     padding-block: rem(2.5);
+    min-width: rem(80);
+    @include sp {
+        min-width: rem(90);
+    }
 }
