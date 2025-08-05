@@ -1277,6 +1277,9 @@ c-side-title
   text-align: center;
   color: #FFF;
   transition: 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media (max-width: 767px) {
   .p-slider-card__name {

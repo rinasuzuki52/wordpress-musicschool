@@ -403,6 +403,9 @@
     text-align: center;
     color: $font-color2;
     transition: 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     @include sp {
         padding-top: rem(27);
     }
