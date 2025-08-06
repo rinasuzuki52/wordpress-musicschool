@@ -24,8 +24,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     <!-- Webフォント -->
     <!-- css -->
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <div id="container">
@@ -70,7 +70,7 @@
             </div>
         </section>
         <!-- パンくずリスト -->
-        <section class="p-blog-list__breadcrumbs p-blog-list-breadcrumbs p-breadcrumbs">
+        <div class="p-blog-list__breadcrumbs p-blog-list-breadcrumbs p-breadcrumbs">
             <div class="p-blog-list-breadcrumbs__inner p-breadcrumbs__inner l-inner">
                 <nav class="p-breadcrumbs__list">
                     <ul>
@@ -80,7 +80,7 @@
                     </ul>
                 </nav>
             </div>
-        </section>
+        </div>
         
         <!-- blog-list -->
         <section class="p-blog-list__section p-list-section">
@@ -98,7 +98,7 @@
                                 <img src="images/blog-list/blog01.png" alt="技術面はプロによるマンツーマン授業！">
                             </picture>
                             </div>
-                            <div class="p-list-item__caption c-caption">
+                            <div class="c-category p-list-item__category">
                                 ギター
                             </div>
                         </div>
@@ -126,7 +126,7 @@
                                 <img src="images/blog-list/blog02.png" alt="集客してる間は売れないという法則">
                             </picture>
                             </div>
-                            <div class="p-list-item__caption c-caption">
+                            <div class="c-category p-list-item__category">
                                 集客方法
                             </div>
                         </div>
@@ -154,7 +154,7 @@
                                 <img src="images/blog-list/blog03.png" alt="フォロワーではなくファンを増やせとは？">
                             </picture>
                             </div>
-                            <div class="p-list-item__caption c-caption">
+                            <div class="c-category p-list-item__category">
                                 SNS
                             </div>
                         </div>
@@ -182,7 +182,7 @@
                                 <img src="images/blog-list/blog01.png" alt="技術面はプロによるマンツーマン授業！">
                             </picture>
                             </div>
-                            <div class="p-list-item__caption c-caption">
+                            <div class="c-category p-list-item__category">
                                 ギター
                             </div>
                         </div>
@@ -210,7 +210,7 @@
                                 <img src="images/blog-list/blog02.png" alt="集客してる間は売れないという法則">
                             </picture>
                             </div>
-                            <div class="p-list-item__caption c-caption">
+                            <div class="c-category p-list-item__category">
                                 集客方法
                             </div>
                         </div>
@@ -238,7 +238,7 @@
                                 <img src="images/blog-list/blog03.png" alt="フォロワーではなくファンを増やせとは？">
                             </picture>
                             </div>
-                            <div class="p-list-item__caption c-caption">
+                            <div class="c-category p-list-item__category">
                                 SNS
                             </div>
                         </div>
@@ -266,7 +266,7 @@
                                 <img src="images/blog-list/blog01.png" alt="技術面はプロによるマンツーマン授業！">
                             </picture>
                             </div>
-                            <div class="p-list-item__caption c-caption">
+                            <div class="c-category p-list-item__category">
                                 ギター
                             </div>
                         </div>
@@ -294,7 +294,7 @@
                                 <img src="images/blog-list/blog02.png" alt="集客してる間は売れないという法則">
                             </picture>
                             </div>
-                            <div class="p-list-item__caption c-caption">
+                            <div class="c-category p-list-item__category">
                                 集客方法
                             </div>
                         </div>
@@ -322,7 +322,7 @@
                                 <img src="images/blog-list/blog03.png" alt="フォロワーではなくファンを増やせとは？">
                             </picture>
                             </div>
-                            <div class="p-list-item__caption c-caption">
+                            <div class="c-category p-list-item__category">
                                 SNS
                             </div>
                         </div>
@@ -350,7 +350,7 @@
                                 <img src="images/blog-list/blog01.png" alt="技術面はプロによるマンツーマン授業！">
                             </picture>
                             </div>
-                            <div class="p-list-item__caption c-caption">
+                            <div class="c-category p-list-item__category">
                                 ギター
                             </div>
                         </div>
@@ -433,21 +433,21 @@
     </footer>
 
 <!-- トップへ戻るボタン -->
- <a href="#" class="c-back-btn u-scroll-show">
+ <a href="#" class="c-back-btn">
     <div class="c-back-btn__icon">
-        <img src="images/top-back-btn.svg" alt="トップへ戻る">
+        <img src="images/top-back-btn.svg">
     </div>
  </a>
 
 <!-- お問い合わせボタン -->
- <a href="./contact-form.html" class="c-btn c-contact-btn fixed-position-con u-scroll-show" alt="お問い合わせ">
+ <a href="./contact-form.html" class="c-btn c-btn--contact js-contact-btn">
     お問い合わせ
  </a>
 </div>
 
 <!-- js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="./js/main.js"></script>
 <script src="./js/slick.min.js"></script>
+<script src="./js/main.js"></script>
 </body>
 </html>

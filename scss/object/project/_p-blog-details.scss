@@ -29,10 +29,10 @@
   }
 }
 
-.p-blog-details__caption {
-    width: rem(80);
+.p-blog-details__category {
+    min-width: rem(80);
     @include sp {
-      width: rem(90);
+      min-width: rem(90);
     }
 }
 
@@ -146,8 +146,7 @@
   top: 50%;
   transform: translateY(-50%);
   @include sp {
-    height: rem(50);
-    top: 45%;
+     height: calc(100% - rem(10));
   }
 }
 

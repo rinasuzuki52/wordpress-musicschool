@@ -24,8 +24,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     <!-- Webフォント -->
     <!-- css -->
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <div id="container">
@@ -70,7 +70,7 @@
             </div>
         </section>
         <!-- パンくずリスト -->
-        <section class="p-contact-form__breadcrumbs p-contact-form-breadcrumbs p-breadcrumbs">
+        <div class="p-contact-form__breadcrumbs p-contact-form-breadcrumbs p-breadcrumbs">
             <div class="p-contact-form-breadcrumbs__inner p-contact-form__inner l-inner">
                 <nav class="p-breadcrumbs__list">
                     <ul>
@@ -80,7 +80,7 @@
                     </ul>
                 </nav>
             </div>
-        </section>
+        </div>
         <!-- contact-form-area -->
         <section class="p-contact-form__area">
             <div class="p-contact-form__inner l-inner">
@@ -132,7 +132,7 @@
                     <!-- チェックボックス -->
                     <dl class="p-form__group p-form__group2">
                         <dt>
-                            <label for="tel" class="p-form__label p-form__check">
+                            <label class="p-form__label p-form__check">
                                 目　的<br class="u-pc"><span class="u-sp">　</span>(複数選択可)
                             </label>
                         </dt>
@@ -142,15 +142,15 @@
                                 <span>プランについてのお問い合わせ</span>
                             </label>
                             <label class="p-form__checkbox">
-                                <input type="checkbox" name="purpose" value="プランについてのお問い合わせ">
+                                <input type="checkbox" name="purpose" value="ヒアリングのご予約">
                                 <span>ヒアリングのご予約</span>
                             </label>
                             <label class="p-form__checkbox">
-                                <input type="checkbox" name="purpose" value="プランについてのお問い合わせ">
+                                <input type="checkbox" name="purpose" value="資料請求">
                                 <span>資料請求</span>
                             </label>
                             <label class="p-form__checkbox">
-                                <input type="checkbox" name="purpose" value="プランについてのお問い合わせ">
+                                <input type="checkbox" name="purpose" value="その他">
                                 <span>その他</span>
                             </label>
                         </dd>
@@ -216,21 +216,16 @@
     </footer>
 
 <!-- トップへ戻るボタン -->
- <a href="#" class="c-back-btn u-scroll-show">
+ <a href="#" class="c-back-btn">
     <div class="c-back-btn__icon">
-        <img src="images/top-back-btn.svg" alt="トップへ戻る">
+        <img src="images/top-back-btn.svg">
     </div>
  </a>
-
-<!-- お問い合わせボタン -->
- <!-- <a href="#" class="c-btn c-contact-btn fixed-position-con u-scroll-show" alt="お問い合わせ">
-    お問い合わせ
- </a>-->
 </div>
 
 <!-- js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="./js/main.js"></script>
 <script src="./js/slick.min.js"></script>
+<script src="./js/main.js"></script>
 </body>
 </html>

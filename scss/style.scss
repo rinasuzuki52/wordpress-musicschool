@@ -30,16 +30,14 @@
 // -----------------------------------------------------------------
 
 @use "object/component/c-hamburger";
+@use "object/component/c-back-btn";
 @use "object/component/c-btn";
 @use "object/component/c-title";
 @use "object/component/c-title2";
-@use "object/component/c-caption";
-@use "object/component/c-back-btn";
-@use "object/component/c-contact-btn";
+@use "object/component/c-category";
 @use "object/component/c-circle";
 @use "object/component/c-pagination";
 @use "object/component/c-side-title";
-@use "object/component/c-related";
 
 
 // -----------------------------------------------------------------
@@ -61,6 +59,8 @@
 @use "object/project/p-result-list";
 @use "object/project/p-result-details";
 @use "object/project/p-side";
+@use "object/project/p-related";
+
 
 
 // -----------------------------------------------------------------

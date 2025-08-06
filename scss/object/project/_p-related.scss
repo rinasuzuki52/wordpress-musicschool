@@ -3,17 +3,16 @@
 @use '../../foundation/mixin' as *;
 
 // ==========================================================================
-// c-related
+// p-related
 // ==========================================================================
-
-.c-related {
+.p-related {
     margin-top: rem(94);
     @include sp {
         margin-top: rem(62);
     }
 }
 
-.c-related__label {
+.p-related__label {
     background-color: $font-color1;
     color: $font-color2;
     font-size: rem(18);
@@ -27,7 +26,7 @@
     }
 }
 
-.c-related__list {
+.p-related__list {
     margin-top: rem(30);
     display: flex;
     flex-direction: column;
@@ -38,7 +37,7 @@
     }
 }
 
-.c-related__wrap {
+.p-related__wrap {
     width: 100%;
     display: flex;
     column-gap: rem(30);
@@ -51,7 +50,7 @@
     }
 }
 
-.c-related__right {
+.p-related__right {
     position: relative;
     width: rem(260);
     @include sp {
@@ -59,28 +58,28 @@
     }
 }
 
-.c-related__right2 {
+.p-related__right2 {
     width: rem(200);
     @include sp {
         width: rem(160);
     }
 }
 
-.c-related__image {
+.p-related__image {
     width: rem(260);
     @include sp {
         width: 100%;
     }
 }
 
-.c-related__image2 {
+.p-related__image2 {
     width: rem(200);
     @include sp {
         width: 100%;
     }
 }
 
-.c-related__image img {
+.p-related__image img {
     aspect-ratio: 260 / 183;
     object-fit: cover;
     @include sp {
@@ -88,7 +87,7 @@
     }
 }
 
-.c-related__image2 img {
+.p-related__image2 img {
     aspect-ratio: 200 / 140;
     object-fit: cover;
     @include sp {
@@ -96,32 +95,32 @@
     }
 }
 
-.c-related__caption {
+.p-related__category {
+    min-width: rem(80);
+}
+
+.p-related__category2 {
     min-width: rem(100);
     @include sp {
-        width: rem(80);
+        min-width: rem(80);
     }
 }
 
-.c-related__caption2 {
-    width: rem(80);
-}
-
-.c-related__textarea {
+.p-related__textarea {
     flex: 1;
 }
 
-.c-related__textarea2 {
+.p-related__textarea2 {
     @include sp {
         padding-top: rem(8);
     }
 }
 
-.c-related__title {
+.p-related__title {
     font-size: rem(20);
     line-height: calc(25 / 20);
     font-weight: 600;
-    // ３行以上は省略
+    // 3行以上は省略
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
@@ -129,10 +128,12 @@
     @include sp {
         font-size: rem(17);
         line-height: calc(28 / 17);
+        // 2行以上は省略
+        -webkit-line-clamp: 2;
     }
 }
 
-.c-related__time {
+.p-related__time {
     display: inline-block;
     font-size: rem(17);
     line-height: calc(30 / 17);
@@ -144,7 +145,7 @@
     }
 }
 
-.c-list-item__article {
+.p-list-item__article {
     font-size: rem(18);
     line-height: calc(30 / 18);
     margin-top: rem(11);

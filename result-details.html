@@ -24,8 +24,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     <!-- Webフォント -->
     <!-- css -->
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <div id="container">
@@ -58,7 +58,7 @@
     </header>
     <main class="p-result-details">
         <!-- パンくずリスト -->
-        <section class="p-result-details__breadcrumbs p-result-details-breadcrumbs p-breadcrumbs">
+        <div class="p-result-details__breadcrumbs p-result-details-breadcrumbs p-breadcrumbs">
             <div class="p-result-details-breadcrumbs__inner p-breadcrumbs__inner l-inner">
                 <nav class="p-breadcrumbs__list">
                     <ul>
@@ -72,7 +72,7 @@
                     </ul>
                 </nav>
             </div>
-        </section>
+        </div>
         <!-- result-details -->
         <section class="p-result-details__section p-details">
             <div class="p-details__inner l-inner">
@@ -83,7 +83,7 @@
                             <img src="images/result-details/voice01.jpg" alt="タイトルが入ります">
                         </picture>
                     </div>
-                    <div class="p-details__caption c-caption">
+                    <div class="c-category p-details__category">
                         ポップス
                     </div>
                 </div>
@@ -155,75 +155,75 @@
                     </a>
                 </div>
                 <!-- 関連記事 -->
-                <div class="c-related p-details__related">
-                    <div class="c-related__label">
+                <div class="p-related p-details__related">
+                    <div class="p-related__label">
                         関連記事
                     </div>
-                    <div class="c-related__list">
-                        <a href="./result-details.html" class="c-related__item">
-                            <div class="c-related__wrap">
-                                <div class="c-related__right">
-                                    <div class="c-related__image">
+                    <div class="p-related__list">
+                        <a href="./result-details.html" class="p-related__item">
+                            <div class="p-related__wrap">
+                                <div class="p-related__right">
+                                    <div class="p-related__image">
                                         <picture>
                                             <source media="(max-width: 767px)" srcset="images/result-details/voice02sp.jpg">
                                             <img src="images/result-details/voice02.jpg" alt="タイトルが入ります">
                                         </picture>
                                     </div>
-                                    <div class="c-related__caption c-caption">
+                                    <div class="c-category p-related__category2">
                                         ロック
                                     </div>
                                 </div>
-                                <div class="c-related__textarea">
-                                    <h3 class="c-related__title">
+                                <div class="p-related__textarea">
+                                    <h3 class="p-related__title">
                                         タイトルが入ります。タイトルが入ります。タイトルが入ります。
                                     </h3>
-                                    <time datetime="0000-00-00" class="c-related__time">
+                                    <time datetime="0000-00-00" class="p-related__time">
                                         0000.00.00
                                     </time>
                                 </div>
                             </div>
                         </a>
-                         <a href="./result-details.html" class="c-related__item">
-                            <div class="c-related__wrap">
-                                <div class="c-related__right">
-                                    <div class="c-related__image">
+                         <a href="./result-details.html" class="p-related__item">
+                            <div class="p-related__wrap">
+                                <div class="p-related__right">
+                                    <div class="p-related__image">
                                         <picture>
                                             <source media="(max-width: 767px)" srcset="images/result-details/voice03sp.jpg">
                                             <img src="images/result-details/voice03.jpg" alt="タイトルが入ります">
                                         </picture>
                                     </div>
-                                    <div class="c-related__caption c-caption">
+                                    <div class="c-category p-related__category2">
                                         ジャズ
                                     </div>
                                 </div>
-                                <div class="c-related__textarea">
-                                    <h3 class="c-related__title">
+                                <div class="p-related__textarea">
+                                    <h3 class="p-related__title">
                                         タイトルが入ります。タイトルが入ります。タイトルが入ります。
                                     </h3>
-                                    <time datetime="0000-00-00" class="c-related__time">
+                                    <time datetime="0000-00-00" class="p-related__time">
                                         0000.00.00
                                     </time>
                                 </div>
                             </div>
                         </a>
-                         <a href="./result-details.html" class="c-related__item">
-                            <div class="c-related__wrap">
-                                <div class="c-related__right">
-                                    <div class="c-related__image">
+                         <a href="./result-details.html" class="p-related__item">
+                            <div class="p-related__wrap">
+                                <div class="p-related__right">
+                                    <div class="p-related__image">
                                         <picture>
                                             <source media="(max-width: 767px)" srcset="images/result-details/voice04sp.jpg">
                                             <img src="images/result-details/voice04.jpg" alt="タイトルが入ります">
                                         </picture>
                                     </div>
-                                    <div class="c-related__caption c-caption">
+                                    <div class="c-category p-related__category2">
                                         ラテン
                                     </div>
                                 </div>
-                                <div class="c-related__textarea">
-                                    <h3 class="c-related__title">
+                                <div class="p-related__textarea">
+                                    <h3 class="p-related__title">
                                         タイトルが入ります。タイトルが入ります。タイトルが入ります。
                                     </h3>
-                                    <time datetime="0000-00-00" class="c-related__time">
+                                    <time datetime="0000-00-00" class="p-related__time">
                                         0000.00.00
                                     </time>
                                 </div>
@@ -276,21 +276,21 @@
     </footer>
 
 <!-- トップへ戻るボタン -->
- <a href="#" class="c-back-btn u-scroll-show">
+ <a href="#" class="c-back-btn">
     <div class="c-back-btn__icon">
-        <img src="images/top-back-btn.svg" alt="トップへ戻る">
+        <img src="images/top-back-btn.svg">
     </div>
  </a>
 
 <!-- お問い合わせボタン -->
- <a href="./contact-form.html" class="c-btn c-contact-btn fixed-position-con u-scroll-show" alt="お問い合わせ">
+ <a href="./contact-form.html" class="c-btn c-btn--contact js-contact-btn">
     お問い合わせ
  </a>
 </div>
 
 <!-- js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="./js/main.js"></script>
 <script src="./js/slick.min.js"></script>
+<script src="./js/main.js"></script>
 </body>
 </html>

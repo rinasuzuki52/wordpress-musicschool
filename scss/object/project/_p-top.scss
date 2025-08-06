@@ -403,6 +403,9 @@
     text-align: center;
     color: $font-color2;
     transition: 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     @include sp {
         padding-top: rem(27);
     }
@@ -589,7 +592,7 @@
 .p-top-qa__lists {
     margin-top: rem(36);
     width: 100%;
-    border-top: 0.05rem solid $font-color1;
+    border-top: 0.5px solid $font-color1;
     @include sp {
         margin-top: rem(38);
     }
@@ -600,7 +603,7 @@
 // ==========================================================================
 
 .p-qa-list {
-    border-bottom: 0.05rem solid $font-color1;
+    border-bottom: 0.5px solid $font-color1;
 }
 
 .p-qa-list__q::after {
@@ -774,7 +777,7 @@
 }
 
 .p-blog-card__title {
-    padding-top: rem(20);
+    margin-top: rem(20);
     font-size: rem(20);
     line-height: calc(25 / 20);
     font-weight: 600;
@@ -786,7 +789,7 @@
 
 .p-blog-card__date {
     display: block;
-    padding-top: rem(11);
+    margin-top: rem(11);
     font-size: rem(17);
     line-height: calc(30 / 17);
     text-align: right;
@@ -795,6 +798,10 @@
     }
 }
 
-.p-blog-card__caption {
+.p-blog-card__category {
     padding-block: rem(2.5);
+    min-width: rem(80);
+    @include sp {
+        min-width: rem(90);
+    }
 }
