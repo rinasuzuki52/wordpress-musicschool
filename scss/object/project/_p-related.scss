@@ -120,7 +120,7 @@
     font-size: rem(20);
     line-height: calc(25 / 20);
     font-weight: 600;
-    // ３行以上は省略
+    // 3行以上は省略
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
@@ -128,6 +128,8 @@
     @include sp {
         font-size: rem(17);
         line-height: calc(28 / 17);
+        // 2行以上は省略
+        -webkit-line-clamp: 2;
     }
 }
 

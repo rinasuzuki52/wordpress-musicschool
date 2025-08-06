@@ -2689,8 +2689,7 @@ c-side-title
 }
 @media (max-width: 767px) {
   .p-blog-body__smalltitle::before {
-    height: 3.125rem;
-    top: 45%;
+    height: calc(100% - 0.625rem);
   }
 }
 
@@ -4006,6 +4005,7 @@ c-side-title
   .p-related__title {
     font-size: 1.0625rem;
     line-height: 1.6470588235;
+    -webkit-line-clamp: 2;
   }
 }
 

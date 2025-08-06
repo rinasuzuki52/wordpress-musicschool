@@ -146,8 +146,7 @@
   top: 50%;
   transform: translateY(-50%);
   @include sp {
-    height: rem(50);
-    top: 45%;
+     height: calc(100% - rem(10));
   }
 }
 
