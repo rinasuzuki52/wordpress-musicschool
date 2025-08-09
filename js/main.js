@@ -128,7 +128,7 @@ $(function(){
   const LIMIT = 5;
 
   // 対象となるセレクタをカンマでつなぐ
-  $('.c-category').each(function(){
+  $('js-ellipsis5').each(function(){
     const txt = $(this).text().trim();
     if (txt.length > LIMIT) {
       // substr の第1引数に0, 第2引数にLIMIT を指定
