@@ -122,13 +122,13 @@ $(document).ready(function(){
 
 
 
-// 20文字まで表示
+// 25文字まで表示
 $(function(){
   // 表示文字数の上限（ここでは25文字に設定）
   const LIMIT = 25;
 
   // 対象となるセレクタをカンマでつなぐ
-  $('js-ellipsis25').each(function(){
+  $('.js-ellipsis25').each(function(){
     const txt = $(this).text().trim();
     if (txt.length > LIMIT) {
       // substr の第1引数に0, 第2引数にLIMIT を指定
@@ -143,7 +143,7 @@ $(function(){
   const LIMIT = 15;
 
   // 対象となるセレクタをカンマでつなぐ
-  $('js-ellipsis15').each(function(){
+  $('.js-ellipsis15').each(function(){
     const txt = $(this).text().trim();
     if (txt.length > LIMIT) {
       // substr の第1引数に0, 第2引数にLIMIT を指定
