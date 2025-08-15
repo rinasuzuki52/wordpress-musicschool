@@ -3309,11 +3309,14 @@ c-side-title
   }
 }
 
+.p-result-section__textarea {
+  padding-top: 1.25rem;
+}
+
 .p-result-section__texttitle {
   font-size: 1.25rem;
   line-height: 1.25;
   font-weight: 600;
-  padding-top: 1.25rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
