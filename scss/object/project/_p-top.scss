@@ -715,12 +715,11 @@
     grid-template-columns: repeat(3, 1fr); // 3列に分割
     margin-top: rem(35);
     width: 100%;
-    column-gap: rem(50);
+    gap: 5.7%;
     @include sp {
         grid-template-columns: repeat(1, 1fr);
         margin-top: rem(39);
-        column-gap: rem(0);
-        row-gap: rem(41);
+        gap: rem(41);
     }
 }
 
@@ -752,15 +751,14 @@
 // ==========================================================================
 
 .p-blog-card {
-    width: rem(260);
+    // width: rem(260);
+    width: 100%;
+    min-width: 0;
     transition: 0.3s;
     position: relative;
     transition: all .4s;
     &:hover {
         opacity: 0.7;
-    }
-    @include sp {
-        width: 100%;
     }
 }
 
@@ -782,7 +780,7 @@
     line-height: calc(25 / 20);
     font-weight: 600;
     @include sp {
-        padding-top: rem(30);
+        margin-top: rem(30);
         line-height: calc((30 /20));
     }
 }
