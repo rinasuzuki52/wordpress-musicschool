@@ -16,18 +16,19 @@
 .p-result-section__list {
     margin-top: rem(41);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: rem(71) 12%;
     @include sp {
         margin-top: rem(39);
-        display: flex;
-        flex-direction: column;
-        row-gap: rem(41);
+        grid-template-columns: repeat(1, 1fr);
+        gap: rem(41);
     }
 }
 
 .p-result-section__item {
-    width: rem(387);
+    // width: rem(387);
+    width: 100%;
+    min-width: 0;
     @include sp {
         width: 100%;
     }
@@ -61,11 +62,14 @@
     }
 }
 
+.p-result-section__textarea {
+    padding-top: rem(20);
+}
+
 .p-result-section__texttitle {
     font-size: rem(20);
     line-height: calc(25 / 20);
     font-weight: 600;
-    padding-top: rem(20);
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
