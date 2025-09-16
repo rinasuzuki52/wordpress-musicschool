@@ -542,6 +542,10 @@ img {
   z-index: 999; /* 表示順序を設定 */
 }
 
+.l-header__logo {
+  margin: 0;
+}
+
 .l-inner {
   max-width: 58.75rem;
   padding-inline: 1.875rem;
@@ -1774,7 +1778,13 @@ c-side-title
   }
 }
 
+.p-header-logo__image img {
+  display: block;
+  width: 100%;
+}
+
 .p-header-logo__text {
+  display: inline-block;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.15;
@@ -1789,6 +1799,7 @@ c-side-title
   }
 }
 .p-header-logo__text span {
+  display: inline-block;
   font-size: 0.9375rem;
 }
 @media (max-width: 767px) {
