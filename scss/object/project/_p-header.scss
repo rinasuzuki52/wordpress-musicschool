@@ -69,7 +69,14 @@
     }
 }
 
+.p-header-logo__image img {
+    display: block;
+    width: 100%;
+}
+
+
 .p-header-logo__text {
+    display: inline-block;
     font-size: rem(20);
     font-weight: 700;
     line-height: calc(23 / 20);
@@ -81,6 +88,7 @@
         padding-top: 0;
     }
     span {
+        display: inline-block;
         font-size: rem(15);
         @include sp {
             font-size: rem(13);
