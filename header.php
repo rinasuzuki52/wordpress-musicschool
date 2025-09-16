@@ -24,8 +24,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     <!-- Webフォント -->
     <!-- css -->
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/slick.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
+    <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/slick.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css"> -->
+<?php wp_head(); ?>
 </head>
 <body>
 <div id="container">
@@ -51,15 +52,6 @@
         <?php else : ?>
         </div>
         <?php endif; ?>
-
-            <!-- <a href="./index.html" class="p-header__logo p-header-logo">
-                <div class="p-header-logo__image">
-                    <img srcset="<?php echo get_template_directory_uri(); ?>/images/logo-red.svg" alt="きたむらミュージックスクール">
-                </div>
-                <h1 class="p-header-logo__text">
-                    きたむら<br class="u-pc"><span>ミュージックスクール</span>
-                </h1>
-            </a> -->
             <div class="p-header__right">
                 <div class="c-hamburger u-sp">
                     <span></span>
