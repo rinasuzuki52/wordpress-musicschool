@@ -23,3 +23,33 @@ function custom_theme_setup()
   add_theme_support('responsive-embeds');
 }
 add_action('after_setup_theme', 'custom_theme_setup');
+
+// --------------------------------------------------
+//ファイル読み込み
+// --------------------------------------------------
+function add_files()
+{
+  $now = date('YmdHis');
+
+  // css登録
+  wp_register_style('common-style', get_theme_file_uri('/css/style.css'), array(), $now);
+
+  // 共通CSS
+  wp_enqueue_style('slick-style', get_theme_file_uri('/css/slick.css'), array(), NULL);
+  wp_enqueue_style('common-style');
+
+  // WordPress提供のjquery.jsを読み込まない
+  wp_deregister_script('jquery');
+
+  // jQueryの読み込み
+  wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', "", NULL, true);
+
+  //JS登録
+  wp_register_script('common-script', get_theme_file_uri('/js/main.js'), array('jquery'), $now, true);
+
+  // 共通のJS
+  wp_enqueue_script('slick-script', get_theme_file_uri('/js/slick.min.js'), array('jquery'), NULL, true);
+  wp_enqueue_script('common-script');
+
+}
+add_action('wp_enqueue_scripts', 'add_files');
