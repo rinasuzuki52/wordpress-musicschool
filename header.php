@@ -23,9 +23,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     <!-- Webフォント -->
-    <!-- css -->
-    <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/slick.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css"> -->
 <?php wp_head(); ?>
 </head>
 <body>

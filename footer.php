@@ -39,24 +39,7 @@
         </div>
     </footer>
 
-<!-- トップへ戻るボタン -->
- <a href="#" class="c-back-btn">
-    <div class="c-back-btn__icon">
-        <img srcset="<?php echo get_template_directory_uri(); ?>/images/top-back-btn.svg">
-    </div>
- </a>
-
-<!-- お問い合わせボタン -->
- <a href="<?php echo get_template_directory_uri(); ?>/contact-form.html" class="c-btn c-btn--contact js-contact-btn">
-    お問い合わせ
- </a>
-
 </div>
-
-<!-- js -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/slick.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script> -->
 <?php wp_footer(); ?>
 </body>
 </html>
