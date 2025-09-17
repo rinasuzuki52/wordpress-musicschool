@@ -1,61 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>きたむらミュージックスクール</title>
-    <meta name="description" content="音楽業界初！収益化までサポートするミュージックスクールです">
-    <meta name="keywords" content="音楽教室, ミュージックスクール, ピアノ教室, ギター教室">
-    <meta name="robots" content="noindex">
-    <link rel="shortcut icon" href="./images/favicon.ico">
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon180x180.png">
-    <link rel="icon" type="image/png" href="./images/favicon.svg">
-    <meta property="og:title" content="きたむらミュージックスクール">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://test.rina-suzuki.com/site1/images/ogp.jpg">
-    <meta property="og:url" content="https://test.rina-suzuki.com/site1/">
-    <meta property="og:description" content="音楽業界初！収益化までサポートするミュージックスクールです">
-    <meta property="og:site_name" content="きたむらミュージックスクール">
-    <meta property="og:locale" content="ja_JP">
-    <meta name="twitter:card" content="Summary with Large Image">
-    <!-- Webフォント -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
-    <!-- Webフォント -->
-    <!-- css -->
-    <link rel="stylesheet" href="./css/slick.css">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-<div id="container">
-    <header class="l-header p-header">
-        <div class="p-header__inner">
-            <a href="./index.html" class="p-header__logo p-header-logo">
-                <div class="p-header-logo__image">
-                    <img src="images/logo-red.svg" alt="きたむらミュージックスクール">
-                </div>
-                <div class="p-header-logo__text">
-                    きたむら<br class="u-pc"><span>ミュージックスクール</span>
-                </div>
-            </a>
-            <div class="p-header__right">
-                <div class="c-hamburger u-sp">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <nav class="p-header__nav p-header-nav">
-                    <ul class="p-header-nav__lists">
-                        <li><a href="./plan.html" class="p-header-nav__list">料金</a></li>
-                        <li><a href="./blog-list.html" class="p-header-nav__list">ブログ</a></li>
-                        <li><a href="./result-list.html" class="p-header-nav__list">卒業実績</a></li>
-                    </ul>
-                </nav>
-                <a href="./contact-form.html" class="c-btn p-header__btn u-pc">お問い合わせ</a>
-            </div>
-        </div>
-    </header>
+<?php get_header(); ?>
     <main class="p-blog-details">
         <!-- パンくずリスト -->
         <div class="p-result-details__breadcrumbs p-result-details-breadcrumbs p-breadcrumbs">
@@ -279,7 +222,8 @@
             </div>
         </section>
         </div>
-            <!-- サイドバーエリア -->
+        <?php get_sidebar(); ?>
+            <!-- サイドバーエリア
             <div class="l-two-col-container__side">
                 <div class="p-side__magazine p-side-magazine">
                     <div class="p-side-magazine__title c-side-title">
@@ -370,66 +314,8 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
+    <?php get_template_part('template-parts/fix-area'); ?>
     </main>
-    <footer class="l-footer p-footer">
-        <div class="p-footer__inner l-inner">
-            <nav class="p-footer__nav p-footer-nav">
-                <ul class="p-footer-nav__lists">
-                    <li class="p-footer-nav__list"><a href="index.html">ホーム</a></li>
-                    <li class="p-footer-nav__list"><a href="./plan.html">料金</a></li>
-                    <li class="p-footer-nav__list"><a href="./blog-list.html">ブログ</a></li>
-                    <li class="p-footer-nav__list"><a href="./result-list.html">卒業実績</a></li>
-                </ul>
-            </nav>
-            <a class="p-footer__logo" href="index.html">
-                <img src="images/logo-white.svg" alt="きたむらミュージックスクール">
-            </a>
-            <p class="p-footer__copyright">
-                Copyright &copy; 0000 KITAMURA music school Inc. <br class="u-sp">All Rights
-            </p>
-            <ul class="p-footer__snsbtn">
-                <li>
-                    <a href="#">
-                        <img src="images/icon-twitter.svg" alt="twitter">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/icon-facebook.svg" alt="Facebook">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/icon-youtube.svg" alt="YouTube">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/icon-instagram.svg" alt="Instagram">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </footer>
-
-<!-- トップへ戻るボタン -->
- <a href="#" class="c-back-btn">
-    <div class="c-back-btn__icon">
-        <img src="images/top-back-btn.svg">
-    </div>
- </a>
-
-<!-- お問い合わせボタン -->
- <a href="./contact-form.html" class="c-btn c-btn--contact js-contact-btn">
-    お問い合わせ
- </a>
-</div>
-
-<!-- js -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="./js/slick.min.js"></script>
-<script src="./js/main.js"></script>
-</body>
-</html>
+ <?php get_footer(); ?>   
