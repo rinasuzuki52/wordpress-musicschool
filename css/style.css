@@ -2912,6 +2912,10 @@ c-side-title
   text-align: right;
 }
 
+.p-pagination__link.is-next {
+  margin-left: auto;
+}
+
 .p-search {
   margin-top: 5rem;
 }

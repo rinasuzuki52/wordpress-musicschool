@@ -125,39 +125,10 @@
                             </blockquote>
                             <a href="#" class="p-blog-body__link">テキストリンク</a> -->
                         </div>
-                        <!-- ページネーション  -->
-                    <div class="p-blog-details__pagination p-pagination">
-                    <a href="./blog-details.html">
-                        <div class="p-pagination__article">
-                            <p class="p-pagination__prev">
-                                ◀︎ 前の記事
-                            </p>
-                            <div class="p-pagination__articlearea">
-                                <div class="p-pagination__image u-pc">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/result-details/blog03.jpg" alt="前の記事">
-                                </div>
-                                <p class="p-pagination__title js-ellipsis25">
-                                    タイトルが入ります。タイトルが入ります。タイトルが入
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="./blog-details.html">
-                        <div class="p-pagination__article">
-                            <p class="p-pagination__prev p-pagination__next">
-                                次の記事 ▶︎
-                            </p>
-                            <div class="p-prev__articlearea">
-                                <div class="p-pagination__image u-pc">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/result-details/blog03.jpg" alt="前の記事">
-                                </div>
-                                <p class="p-pagination__title js-ellipsis25">
-                                    タイトルが入ります。タイトルが入ります。タイトルが入
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                    </div>
+
+                <!-- ページネーション  -->
+                <?php get_template_part('template-parts/single-pagination'); ?>
+
                 <!-- 関連記事 -->
                 <div class="p-blog-details__related p-related">
                     <h2 class="p-related__label">
