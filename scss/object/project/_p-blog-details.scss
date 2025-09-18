@@ -70,7 +70,7 @@
 // ==========================================================================
 
 
-.p-blog-body__text {
+.p-blog-body p {
   font-size: rem(18);
   line-height: calc(30 / 18);
   @include sp {
@@ -79,7 +79,7 @@
   }
 }
 
-.p-blog-body__title {
+.p-blog-body h2 {
   margin-block: rem(33) rem(15);
   font-size: rem(20);
   line-height: calc(40 / 20);
@@ -90,7 +90,7 @@
   }
 }
 
-.p-blog-body__image {
+.p-blog-body figure {
   margin-top: rem(17);
   width: rem(335);
   @include sp {
@@ -100,11 +100,11 @@
 }
 
 
-.p-blog-body__list {
+.p-blog-body ul,ol {
   margin-top: rem(28);
 }
 
-.p-blog-body__listitem {
+.p-blog-body li {
   font-size: rem(18);
   line-height: calc(30 / 18);
   @include sp {
@@ -113,18 +113,18 @@
   }
 }
 
-.p-blog-body__line {
+.p-blog-body hr {
   display: block;
   background-color: $font-color1;
   width: 100%;
-  height: rem(0.5);
+  border-bottom: 1px solid;
   margin-block: rem(42) rem(43);
   @include sp {
     margin-block: rem(37) rem(50);
   }
 }
 
-.p-blog-body__smalltitle {
+.p-blog-body h3 {
   font-size: rem(20);
   line-height: calc(40 / 20);
   font-weight: 600;
@@ -135,7 +135,7 @@
   }
 }
 
-.p-blog-body__smalltitle::before {
+.p-blog-body h3::before {
   content: "";
   width: rem(3);
   height: rem(50);
@@ -150,32 +150,30 @@
   }
 }
 
-.p-blog-body__blockquote {
+.p-blog-body blockquote {
   display: flex;
   column-gap: rem(8);
   padding: rem(18) rem(30) rem(10);
   background-color: #e8e8e8;
   margin-block: rem(17) rem(27);
+  border: none;
   @include sp {
     column-gap: rem(17);
     padding: rem(18) rem(20) rem(11) rem(25);
     margin-block: rem(19) rem(28);
   }
-}
-
-.p-blog-body__quatation {
-  display: inline-block;
-  width: rem(27);
-  @include sp {
-    padding-top: rem(5);
+   &::before {
+    content: "";
+    background: url(../images/blog-details/icon-blockquote.svg) top center / contain no-repeat;
+    display: inline-block;
+    width: rem(27);
+  }
+  p {
+    flex: 1;
   }
 }
 
-.p-blog-body__quatationtext {
-  flex: 1;
-}
-
-.p-blog-body__link {
+.p-blog-body a {
   font-size: rem(20);
   line-height: calc(33 / 20);
   color: $main-color;
