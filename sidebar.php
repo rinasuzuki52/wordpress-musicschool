@@ -5,7 +5,7 @@
                     </div>
                     <div class="p-side-magazine__contents">
                         <a href="./blog-details.html" class="p-side-magazine__banner">
-                            <img src="./images/blog-details/bannerarticle.jpg" alt="バナー広告">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/bannerarticle.jpg" alt="バナー広告">
                             <p>バナー広告</p>
                         </a>
                     </div>
@@ -19,7 +19,7 @@
                             <input class="p-side-search__input" type="text" placeholder="検索ワード">
                             <button class="p-side-search__button" type="submit" class="search-btn">
                                 <span>
-                                    <img src="./images/blog-details/icon-search.svg" alt="検索">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/icon-search.svg" alt="検索">
                                 </span>
                             </button>
                         </form>
@@ -33,7 +33,7 @@
                     <div class="p-side-recommend__items">
                         <a href="./blog-details.html" class="p-side-recommend__item">
                             <div class="p-side-recommend__image">
-                                <img src="./images/blog-details/blogside.jpg" alt="タイトルが入ります。タイトル">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/blogside.jpg" alt="タイトルが入ります。タイトル">
                             </div>
                             <div class="p-side-recommend__textarea">
                                 <div class="p-side-recommend__title js-ellipsis15">
@@ -43,7 +43,7 @@
                         </a>
                         <a href="./blog-details.html" class="p-side-recommend__item">
                             <div class="p-side-recommend__image">
-                                <img src="./images/blog-details/blogside.jpg" alt="タイトルが入ります。タイトル">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/blogside.jpg" alt="タイトルが入ります。タイトル">
                             </div>
                             <div class="p-side-recommend__textarea">
                                 <div class="p-side-recommend__title js-ellipsis15">
@@ -53,7 +53,7 @@
                         </a>
                         <a href="./blog-details.html" class="p-side-recommend__item">
                             <div class="p-side-recommend__image">
-                                <img src="./images/blog-details/blogside.jpg" alt="タイトルが入ります。タイトル">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/blogside.jpg" alt="タイトルが入ります。タイトル">
                             </div>
                             <div class="p-side-recommend__textarea">
                                 <div class="p-side-recommend__title js-ellipsis15">

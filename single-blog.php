@@ -21,53 +21,68 @@
             <!-- メイン  -->
             <div class="l-two-col-container__main">
                 <!-- ブログ詳細エリア -->
+                <?php
+                if (have_posts()):
+                 while (have_posts()):
+                  the_post();
+                ?>
                 <section class="p-blog-details__main">
                     <div class="p-blog-details__head">
                         <div class="p-blog-details__imgarea">
                             <div class="p-blog-details__image">
-                                <picture>
-                                    <source media="(max-width: 767px)" srcset="images/blog-details/blog01sp.jpg">
-                                    <img src="images/blog-details/blog01.jpg" alt="アルペジオが劇的に向上する３つの習慣">
-                                </picture>
+                               <?php if (has_post_thumbnail()) : ?>
+                                    <?php the_post_thumbnail('large'); ?>
+                                <?php else : ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="No image">
+                                <?php endif; ?>
                             </div>
                             <div class="c-category p-blog-details__category">
-                                ギター
+                                <?php
+                                $terms = get_the_terms(get_the_ID(), 'blog_cate');
+                                if (!empty($terms) && !is_wp_error($terms)) {
+                                    echo esc_html($terms[0]->name);
+                                }
+                                ?>
                             </div>
                         </div>
                         <h1 class="p-blog-details__title">
-                            アルペジオが劇的に向上する３つの習慣
+                            <?php the_title(); ?>
                         </h1>
-                        <time datetime="0000-00-00" class="p-blog-details__time">
-                            0000.00.00
+                        <time datetime="<?php the_time('Y-m-d'); ?>" class="p-blog-details__time">
+                            <?php the_time('Y.m.d'); ?>
                         </time>
                         <div class="p-blog-details__sns p-sns-share">
-                            <a href="#" class="p-sns-share__item p-facebook">
+                            <?php
+                            $url = urlencode(get_permalink());
+                            $title = urlencode(get_the_title());
+                            ?>
+                            <a href="<?php echo esc_url('https://www.facebook.com/share.php?u=' . $url); ?>" class="p-sns-share__item p-facebook">
                                 <span class="p-facebook__icon">
-                                    <img src="./images/blog-details/icon-share-facebook.svg" alt="facebook">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/icon-share-facebook.svg" alt="facebook">
                                 </span>
                                 <span class="p-sns-share__name u-pc">Facebook</span>
                             </a>
-                            <a href="#" class="p-sns-share__item p-twitter">
+                            <a href="<?php echo esc_url('https://x.com/share?url=' . $url . '&text=' . $title); ?>" class="p-sns-share__item p-twitter">
                                 <span class="p-twitter__icon">
-                                    <img src="./images/blog-details/icon-share-twitter.svg" alt="twitter">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/icon-share-twitter.svg" alt="twitter">
                                 </span>
                                 <span class="p-sns-share__name u-pc">Twitter</span>
                             </a>
-                            <a href="#" class="p-sns-share__item p-hatena">
+                            <a href="<?php echo esc_url('http://b.hatena.ne.jp/add?mode=confirm&url=' . $url . '&title=' . $title); ?>" class="p-sns-share__item p-hatena">
                                 <span class="p-hatena__icon">
-                                    <img src="./images/blog-details/icon-share-hatena.svg" alt="hatena">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/icon-share-hatena.svg" alt="hatena">
                                 </span>
                                 <span class="p-sns-share__name u-pc">Hatena</span>
                             </a>
-                            <a href="#" class="p-sns-share__item p-line">
+                            <a href="<?php echo esc_url('https://social-plugins.line.me/lineit/share?url=' . $url); ?>" class="p-sns-share__item p-line">
                                 <span class="p-line__icon">
-                                    <img src="./images/blog-details/icon-share-line.svg" alt="line">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/icon-share-line.svg" alt="line">
                                 </span>
                                 <span class="p-sns-share__name u-pc">Twitter</span>
                             </a>
-                            <a href="#" class="p-sns-share__item p-pocket">
+                            <a href="<?php echo esc_url('https://getpocket.com/edit?url=' . $url . '&title=' . $title); ?>" class="p-sns-share__item p-pocket">
                                 <span class="p-pocket__icon">
-                                    <img src="./images/blog-details/icon-share-pocket.svg" alt="pocket">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/icon-share-pocket.svg" alt="pocket">
                                 </span>
                                 <span class="p-sns-share__name u-pc">Pocket</span>
                             </a>
@@ -75,7 +90,8 @@
                     </div>
                     <div class="p-blog-details__contents">
                         <div class="p-blog-details__body p-blog-body">
-                            <p class="p-blog-body__text">
+                            <?php the_content(); ?>
+                            <!-- <p class="p-blog-body__text">
                                 本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                             </p>
                             <h2 class="p-blog-body__title">
@@ -101,13 +117,13 @@
                             </h3>
                             <blockquote class="p-blog-body__blockquote">
                                 <span class="p-blog-body__quatation">
-                                    <img src="./images/blog-details/icon-blockquote.svg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/icon-blockquote.svg" alt="">
                                 </span>
                                 <p class="p-blog-body__text p-blog-body__quatationtext">
                                     本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                                 </p>
                             </blockquote>
-                            <a href="#" class="p-blog-body__link">テキストリンク</a>
+                            <a href="#" class="p-blog-body__link">テキストリンク</a> -->
                         </div>
                         <!-- ページネーション  -->
                     <div class="p-blog-details__pagination p-pagination">
@@ -118,7 +134,7 @@
                             </p>
                             <div class="p-pagination__articlearea">
                                 <div class="p-pagination__image u-pc">
-                                    <img src="./images/result-details/blog03.jpg" alt="前の記事">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/result-details/blog03.jpg" alt="前の記事">
                                 </div>
                                 <p class="p-pagination__title js-ellipsis25">
                                     タイトルが入ります。タイトルが入ります。タイトルが入
@@ -133,7 +149,7 @@
                             </p>
                             <div class="p-prev__articlearea">
                                 <div class="p-pagination__image u-pc">
-                                    <img src="./images/result-details/blog03.jpg" alt="前の記事">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/result-details/blog03.jpg" alt="前の記事">
                                 </div>
                                 <p class="p-pagination__title js-ellipsis25">
                                     タイトルが入ります。タイトルが入ります。タイトルが入
@@ -221,6 +237,10 @@
                 </div>
             </div>
         </section>
+        <?php
+         endwhile;
+        endif;
+        ?>
         </div>
         <?php get_sidebar(); ?>
             <!-- サイドバーエリア
@@ -231,7 +251,7 @@
                     </div>
                     <div class="p-side-magazine__contents">
                         <a href="./blog-details.html" class="p-side-magazine__banner">
-                            <img src="./images/blog-details/bannerarticle.jpg" alt="バナー広告">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/bannerarticle.jpg" alt="バナー広告">
                             <p>バナー広告</p>
                         </a>
                     </div>
@@ -245,7 +265,7 @@
                             <input class="p-side-search__input" type="text" placeholder="検索ワード">
                             <button class="p-side-search__button" type="submit" class="search-btn">
                                 <span>
-                                    <img src="./images/blog-details/icon-search.svg" alt="検索">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/icon-search.svg" alt="検索">
                                 </span>
                             </button>
                         </form>
@@ -259,7 +279,7 @@
                     <div class="p-side-recommend__items">
                         <a href="./blog-details.html" class="p-side-recommend__item">
                             <div class="p-side-recommend__image">
-                                <img src="./images/blog-details/blogside.jpg" alt="タイトルが入ります。タイトル">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/blogside.jpg" alt="タイトルが入ります。タイトル">
                             </div>
                             <div class="p-side-recommend__textarea">
                                 <div class="p-side-recommend__title js-ellipsis15">
@@ -269,7 +289,7 @@
                         </a>
                         <a href="./blog-details.html" class="p-side-recommend__item">
                             <div class="p-side-recommend__image">
-                                <img src="./images/blog-details/blogside.jpg" alt="タイトルが入ります。タイトル">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/blogside.jpg" alt="タイトルが入ります。タイトル">
                             </div>
                             <div class="p-side-recommend__textarea">
                                 <div class="p-side-recommend__title js-ellipsis15">
@@ -279,7 +299,7 @@
                         </a>
                         <a href="./blog-details.html" class="p-side-recommend__item">
                             <div class="p-side-recommend__image">
-                                <img src="./images/blog-details/blogside.jpg" alt="タイトルが入ります。タイトル">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/blogside.jpg" alt="タイトルが入ります。タイトル">
                             </div>
                             <div class="p-side-recommend__textarea">
                                 <div class="p-side-recommend__title js-ellipsis15">
