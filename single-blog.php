@@ -130,35 +130,78 @@
                 <?php get_template_part('template-parts/single-pagination'); ?>
 
                 <!-- 関連記事 -->
+                <?php
+                $terms = get_the_terms($post->ID, 'blog_cate');
+
+                if (!empty($terms)):
+
+                // 取得したタームのIDだけを配列に取り出す
+                $term_ids = wp_list_pluck($terms, 'term_id');
+
+                // 関連記事のクエリ作成
+                $args = [
+                    'posts_per_page' => 3,
+                    'post_type' => 'blog',
+                    'post__not_in' => [get_the_ID()],
+                    'orderby' => 'date',
+                    'order' => 'DESC',
+                    'tax_query' => [
+                    [
+                        'taxonomy' => 'blog_cate',
+                        'field' => 'term_id',
+                        'terms' => $term_ids,
+                    ],
+                    ],
+                ];
+
+                $the_query = new WP_Query($args);
+
+                if ($the_query->have_posts()):
+                ?>
                 <div class="p-blog-details__related p-related">
                     <h2 class="p-related__label">
                         関連記事
                     </h2>
                     <div class="p-related__list">
-                        <a href="./blog-details.html" class="p-related__item">
+                    <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+                    <?php
+                    // 投稿の最初のタームの名前を取得
+                    $post_terms = get_the_terms(get_the_ID(), 'blog_cate');
+                    $term_name = (!empty($post_terms)) ? $post_terms[0]->name : '';
+                    ?>
+                        <a href="<?php the_permalink(); ?>" class="p-related__item">
                             <div class="p-related__wrap">
                                 <div class="p-related__right p-related__right2">
                                     <div class="p-related__image2">
-                                        <picture>
-                                            <source media="(max-width: 767px)" srcset="images/blog-details/blog03.jpg">
-                                            <img src="images/blog-details/blog03.jpg" alt="タイトルが入ります">
-                                        </picture>
+                                        <?php if (has_post_thumbnail()): ?>
+                                            <?php the_post_thumbnail(); ?>
+                                        <?php else: ?>
+                                            <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="No image">
+                                        <?php endif; ?>
                                     </div>
                                     <div class="c-category p-related__category">
-                                        ギター
+                                        <?php echo esc_html($term_name); ?>
                                     </div>
                                 </div>
                                 <div class="p-related__textarea p-related__textarea2">
                                     <h3 class="p-related__title">
-                                        タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                                        <?php echo wp_trim_words(get_the_title(), 32, '...'); ?>
                                     </h3>
                                     <time datetime="0000-00-00" class="p-related__time">
-                                        0000.00.00
+                                        <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?>
                                     </time>
                                 </div>
                             </div>
                         </a>
-                         <a href="./blog-details.html" class="p-related__item">
+                        <?php endwhile;
+                        wp_reset_postdata(); ?>
+                        </div>
+                        </div>
+                        <?php
+                            endif;
+                        endif;
+                        ?>
+                         <!-- <a href="./blog-details.html" class="p-related__item">
                             <div class="p-related__wrap">
                                 <div class="p-related__right p-related__right2">
                                     <div class="p-related__image2">
@@ -205,7 +248,7 @@
                             </div>
                         </a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
         <?php
