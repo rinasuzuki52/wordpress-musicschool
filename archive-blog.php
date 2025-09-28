@@ -1,68 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>きたむらミュージックスクール</title>
-    <meta name="description" content="音楽業界初！収益化までサポートするミュージックスクールです">
-    <meta name="keywords" content="音楽教室, ミュージックスクール, ピアノ教室, ギター教室">
-    <meta name="robots" content="noindex">
-    <link rel="shortcut icon" href="./images/favicon.ico">
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon180x180.png">
-    <link rel="icon" type="image/png" href="./images/favicon.svg">
-    <meta property="og:title" content="きたむらミュージックスクール">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://test.rina-suzuki.com/site1/images/ogp.jpg">
-    <meta property="og:url" content="https://test.rina-suzuki.com/site1/">
-    <meta property="og:description" content="音楽業界初！収益化までサポートするミュージックスクールです">
-    <meta property="og:site_name" content="きたむらミュージックスクール">
-    <meta property="og:locale" content="ja_JP">
-    <meta name="twitter:card" content="Summary with Large Image">
-    <!-- Webフォント -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
-    <!-- Webフォント -->
-    <!-- css -->
-    <link rel="stylesheet" href="./css/slick.css">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-<div id="container">
-    <header class="l-header p-header">
-        <div class="p-header__inner">
-            <a href="./index.html" class="p-header__logo p-header-logo">
-                <div class="p-header-logo__image">
-                    <img src="images/logo-red.svg" alt="きたむらミュージックスクール">
-                </div>
-                <div class="p-header-logo__text">
-                    きたむら<br class="u-pc"><span>ミュージックスクール</span>
-                </div>
-            </a>
-            <div class="p-header__right">
-                <div class="c-hamburger u-sp">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <nav class="p-header__nav p-header-nav">
-                    <ul class="p-header-nav__lists">
-                        <li><a href="./plan.html" class="p-header-nav__list">料金</a></li>
-                        <li><a href="./blog-list.html" class="p-header-nav__list">ブログ</a></li>
-                        <li><a href="./result-list.html" class="p-header-nav__list">卒業実績</a></li>
-                    </ul>
-                </nav>
-                <a href="./contact-form.html" class="c-btn p-header__btn u-pc">お問い合わせ</a>
-            </div>
-        </div>
-    </header>
+<?php get_header(); ?>
     <main class="p-blog-list">
         <!-- ファーストビュー -->
         <section class="p-blog-list__fv p-fv-lower">
             <div class="p-fv-lower__bg">
                 <picture>
-                    <source media="(max-width: 767px)" srcset="images/blog-list/blog-sp.jpg">
-                    <img src="images/blog-list/blog.jpg" alt="プラン・料金">
+                    <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog-sp.jpg">
+                    <img srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog.jpg" alt="プラン・料金">
                 </picture>
             </div>
             <div class="p-fv-lower__title">
@@ -89,41 +32,50 @@
                     ブログ一覧
                 </h2>
             <div class="p-list-section__items">
+            <?php
+            if (have_posts()):
+            while (have_posts()):
+            the_post();
+            ?>
                 <a href="./blog-details.html" class="p-list-section__item p-list-item">
                     <div class="p-list-item__wrap">
                         <div class="p-list-item__right">
                             <div class="p-list-item__image">
-                            <picture>
-                                <source media="(max-width: 767px)" srcset="images/blog-list/blog01sp.jpg">
-                                <img src="images/blog-list/blog01.png" alt="技術面はプロによるマンツーマン授業！">
-                            </picture>
+                            <?php if (has_post_thumbnail()) : ?>
+                                <?php the_post_thumbnail(); ?>
+                            <?php else : ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="No image">
+                            <?php endif; ?>
                             </div>
                             <div class="c-category p-list-item__category">
-                                ギター
+                                <?php
+                                $terms = get_the_terms(get_the_ID(), 'blog_cate');
+                                if (!empty($terms) && !is_wp_error($terms)) {
+                                    echo esc_html($terms[0]->name);
+                                }
+                                ?>
                             </div>
                         </div>
                         <div class="p-list-item__textarea">
                             <h3 class="p-list-item__title js-ellipsis25">
-                                アルペジオが劇的に向上する3つの習慣
+                                <?php echo wp_trim_words(get_the_title(), 26, '...'); ?>
                             </h3>
-                            <time datetime="0000-00-00" class="p-list-item__time">
-                                0000.00.00
+                            <time datetime="<?php the_time('Y-m-d'); ?>" class="p-list-item__time">
+                                <?php the_time('Y.m.d'); ?>
                             </time>
                             <p class="p-list-item__article">
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                <?php echo wp_trim_words(get_the_content(), 120, '...'); ?>
                             </p>
                         </div>
                     </div>
                 </a>
-                <a href="./blog-details.html" class="p-list-section__item p-list-item">
+                <!-- <a href="./blog-details.html" class="p-list-section__item p-list-item">
                     <div class="p-list-item__wrap">
                         <div class="p-list-item__right">
                             <div class="p-list-item__image">
                             <picture>
-                                <source media="(max-width: 767px)" srcset="images/blog-list/blog02sp.jpg">
-                                <img src="images/blog-list/blog02.png" alt="集客してる間は売れないという法則">
+                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog02sp.jpg">
+                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog02.png" alt="集客してる間は売れないという法則">
                             </picture>
                             </div>
                             <div class="c-category p-list-item__category">
@@ -150,8 +102,8 @@
                         <div class="p-list-item__right">
                             <div class="p-list-item__image">
                             <picture>
-                                <source media="(max-width: 767px)" srcset="images/blog-list/blog03sp.jpg">
-                                <img src="images/blog-list/blog03.png" alt="フォロワーではなくファンを増やせとは？">
+                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog03sp.jpg">
+                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog03.png" alt="フォロワーではなくファンを増やせとは？">
                             </picture>
                             </div>
                             <div class="c-category p-list-item__category">
@@ -178,8 +130,8 @@
                         <div class="p-list-item__right">
                             <div class="p-list-item__image">
                             <picture>
-                                <source media="(max-width: 767px)" srcset="images/blog-list/blog01sp.jpg">
-                                <img src="images/blog-list/blog01.png" alt="技術面はプロによるマンツーマン授業！">
+                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog01sp.jpg">
+                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog01.png" alt="技術面はプロによるマンツーマン授業！">
                             </picture>
                             </div>
                             <div class="c-category p-list-item__category">
@@ -206,8 +158,8 @@
                         <div class="p-list-item__right">
                             <div class="p-list-item__image">
                             <picture>
-                                <source media="(max-width: 767px)" srcset="images/blog-list/blog02sp.jpg">
-                                <img src="images/blog-list/blog02.png" alt="集客してる間は売れないという法則">
+                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog02sp.jpg">
+                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog02.png" alt="集客してる間は売れないという法則">
                             </picture>
                             </div>
                             <div class="c-category p-list-item__category">
@@ -234,8 +186,8 @@
                         <div class="p-list-item__right">
                             <div class="p-list-item__image">
                             <picture>
-                                <source media="(max-width: 767px)" srcset="images/blog-list/blog03sp.jpg">
-                                <img src="images/blog-list/blog03.png" alt="フォロワーではなくファンを増やせとは？">
+                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog03sp.jpg">
+                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog03.png" alt="フォロワーではなくファンを増やせとは？">
                             </picture>
                             </div>
                             <div class="c-category p-list-item__category">
@@ -262,8 +214,8 @@
                         <div class="p-list-item__right">
                             <div class="p-list-item__image">
                             <picture>
-                                <source media="(max-width: 767px)" srcset="images/blog-list/blog01sp.jpg">
-                                <img src="images/blog-list/blog01.png" alt="技術面はプロによるマンツーマン授業！">
+                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog01sp.jpg">
+                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog01.png" alt="技術面はプロによるマンツーマン授業！">
                             </picture>
                             </div>
                             <div class="c-category p-list-item__category">
@@ -290,8 +242,8 @@
                         <div class="p-list-item__right">
                             <div class="p-list-item__image">
                             <picture>
-                                <source media="(max-width: 767px)" srcset="images/blog-list/blog02sp.jpg">
-                                <img src="images/blog-list/blog02.png" alt="集客してる間は売れないという法則">
+                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog02sp.jpg">
+                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog02.png" alt="集客してる間は売れないという法則">
                             </picture>
                             </div>
                             <div class="c-category p-list-item__category">
@@ -318,8 +270,8 @@
                         <div class="p-list-item__right">
                             <div class="p-list-item__image">
                             <picture>
-                                <source media="(max-width: 767px)" srcset="images/blog-list/blog03sp.jpg">
-                                <img src="images/blog-list/blog03.png" alt="フォロワーではなくファンを増やせとは？">
+                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog03sp.jpg">
+                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog03.png" alt="フォロワーではなくファンを増やせとは？">
                             </picture>
                             </div>
                             <div class="c-category p-list-item__category">
@@ -346,8 +298,8 @@
                         <div class="p-list-item__right">
                             <div class="p-list-item__image">
                             <picture>
-                                <source media="(max-width: 767px)" srcset="images/blog-list/blog01sp.jpg">
-                                <img src="images/blog-list/blog01.png" alt="技術面はプロによるマンツーマン授業！">
+                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog01sp.jpg">
+                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog01.png" alt="技術面はプロによるマンツーマン授業！">
                             </picture>
                             </div>
                             <div class="c-category p-list-item__category">
@@ -368,7 +320,11 @@
                             </p>
                         </div>
                     </div>
-                </a>
+                </a> -->
+            <?php
+                endwhile;
+            endif;
+            ?>
             </div>
             <!-- ページネーション -->
              <ul class="c-pagination">
@@ -390,64 +346,6 @@
              </ul>
             </div>
         </section>
+    <?php get_template_part('template-parts/fix-area'); ?>
     </main>
-    <footer class="l-footer p-footer">
-        <div class="p-footer__inner l-inner">
-            <nav class="p-footer__nav p-footer-nav">
-                <ul class="p-footer-nav__lists">
-                    <li class="p-footer-nav__list"><a href="index.html">ホーム</a></li>
-                    <li class="p-footer-nav__list"><a href="./plan.html">料金</a></li>
-                    <li class="p-footer-nav__list"><a href="./blog-list.html">ブログ</a></li>
-                    <li class="p-footer-nav__list"><a href="./result-list.html">卒業実績</a></li>
-                </ul>
-            </nav>
-            <a class="p-footer__logo" href="index.html">
-                <img src="images/logo-white.svg" alt="きたむらミュージックスクール">
-            </a>
-            <p class="p-footer__copyright">
-                Copyright &copy; 0000 KITAMURA music school Inc. <br class="u-sp">All Rights
-            </p>
-            <ul class="p-footer__snsbtn">
-                <li>
-                    <a href="#">
-                        <img src="images/icon-twitter.svg" alt="twitter">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/icon-facebook.svg" alt="Facebook">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/icon-youtube.svg" alt="YouTube">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/icon-instagram.svg" alt="Instagram">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </footer>
-
-<!-- トップへ戻るボタン -->
- <a href="#" class="c-back-btn">
-    <div class="c-back-btn__icon">
-        <img src="images/top-back-btn.svg">
-    </div>
- </a>
-
-<!-- お問い合わせボタン -->
- <a href="./contact-form.html" class="c-btn c-btn--contact js-contact-btn">
-    お問い合わせ
- </a>
-</div>
-
-<!-- js -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="./js/slick.min.js"></script>
-<script src="./js/main.js"></script>
-</body>
-</html>
+<?php get_footer(); ?> 
