@@ -17,9 +17,12 @@
             <div class="p-blog-list-breadcrumbs__inner p-breadcrumbs__inner l-inner">
                 <nav class="p-breadcrumbs__list">
                     <ul>
-                      <li><a class="p-breadcrumbs__link" href="./index.html">ホーム</a></li>
+                       <?php if (function_exists('bcn_display')) {
+                            bcn_display();
+                        } ?> 
+                      <!-- <li><a class="p-breadcrumbs__link" href="./index.html">ホーム</a></li>
                       <li><p class="p-breadcrumbs__item">＞</p></li>
-                      <li><p class="p-breadcrumbs__item">ブログ</p></li>
+                      <li><p class="p-breadcrumbs__item">ブログ</p></li> -->
                     </ul>
                 </nav>
             </div>
@@ -69,266 +72,15 @@
                         </div>
                     </div>
                 </a>
-                <!-- <a href="./blog-details.html" class="p-list-section__item p-list-item">
-                    <div class="p-list-item__wrap">
-                        <div class="p-list-item__right">
-                            <div class="p-list-item__image">
-                            <picture>
-                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog02sp.jpg">
-                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog02.png" alt="集客してる間は売れないという法則">
-                            </picture>
-                            </div>
-                            <div class="c-category p-list-item__category">
-                                集客方法
-                            </div>
-                        </div>
-                        <div class="p-list-item__textarea">
-                            <h3 class="p-list-item__title js-ellipsis25">
-                                集客してる間は売れないという法則
-                            </h3>
-                            <time datetime="0000-00-00" class="p-list-item__time">
-                                0000.00.00
-                            </time>
-                            <p class="p-list-item__article">
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                 <a href="./blog-details.html" class="p-list-section__item p-list-item">
-                    <div class="p-list-item__wrap">
-                        <div class="p-list-item__right">
-                            <div class="p-list-item__image">
-                            <picture>
-                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog03sp.jpg">
-                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog03.png" alt="フォロワーではなくファンを増やせとは？">
-                            </picture>
-                            </div>
-                            <div class="c-category p-list-item__category">
-                                SNS
-                            </div>
-                        </div>
-                        <div class="p-list-item__textarea">
-                            <h3 class="p-list-item__title js-ellipsis25">
-                                フォロワーではなくファンを増やせとは？
-                            </h3>
-                            <time datetime="0000-00-00" class="p-list-item__time">
-                                0000.00.00
-                            </time>
-                            <p class="p-list-item__article">
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                 <a href="./blog-details.html" class="p-list-section__item p-list-item">
-                    <div class="p-list-item__wrap">
-                        <div class="p-list-item__right">
-                            <div class="p-list-item__image">
-                            <picture>
-                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog01sp.jpg">
-                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog01.png" alt="技術面はプロによるマンツーマン授業！">
-                            </picture>
-                            </div>
-                            <div class="c-category p-list-item__category">
-                                ギター
-                            </div>
-                        </div>
-                        <div class="p-list-item__textarea">
-                            <h3 class="p-list-item__title js-ellipsis25">
-                                アルペジオが劇的に向上する3つの習慣
-                            </h3>
-                            <time datetime="0000-00-00" class="p-list-item__time">
-                                0000.00.00
-                            </time>
-                            <p class="p-list-item__article">
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                <a href="./blog-details.html" class="p-list-section__item p-list-item">
-                    <div class="p-list-item__wrap">
-                        <div class="p-list-item__right">
-                            <div class="p-list-item__image">
-                            <picture>
-                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog02sp.jpg">
-                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog02.png" alt="集客してる間は売れないという法則">
-                            </picture>
-                            </div>
-                            <div class="c-category p-list-item__category">
-                                集客方法
-                            </div>
-                        </div>
-                        <div class="p-list-item__textarea">
-                            <h3 class="p-list-item__title js-ellipsis25">
-                                集客してる間は売れないという法則
-                            </h3>
-                            <time datetime="0000-00-00" class="p-list-item__time">
-                                0000.00.00
-                            </time>
-                            <p class="p-list-item__article">
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                 <a href="./blog-details.html" class="p-list-section__item p-list-item">
-                    <div class="p-list-item__wrap">
-                        <div class="p-list-item__right">
-                            <div class="p-list-item__image">
-                            <picture>
-                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog03sp.jpg">
-                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog03.png" alt="フォロワーではなくファンを増やせとは？">
-                            </picture>
-                            </div>
-                            <div class="c-category p-list-item__category">
-                                SNS
-                            </div>
-                        </div>
-                        <div class="p-list-item__textarea">
-                            <h3 class="p-list-item__title js-ellipsis25">
-                                フォロワーではなくファンを増やせとは？
-                            </h3>
-                            <time datetime="0000-00-00" class="p-list-item__time">
-                                0000.00.00
-                            </time>
-                            <p class="p-list-item__article">
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                 <a href="./blog-details.html" class="p-list-section__item p-list-item">
-                    <div class="p-list-item__wrap">
-                        <div class="p-list-item__right">
-                            <div class="p-list-item__image">
-                            <picture>
-                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog01sp.jpg">
-                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog01.png" alt="技術面はプロによるマンツーマン授業！">
-                            </picture>
-                            </div>
-                            <div class="c-category p-list-item__category">
-                                ギター
-                            </div>
-                        </div>
-                        <div class="p-list-item__textarea">
-                            <h3 class="p-list-item__title js-ellipsis25">
-                                アルペジオが劇的に向上する3つの習慣
-                            </h3>
-                            <time datetime="0000-00-00" class="p-list-item__time">
-                                0000.00.00
-                            </time>
-                            <p class="p-list-item__article">
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                <a href="./blog-details.html" class="p-list-section__item p-list-item">
-                    <div class="p-list-item__wrap">
-                        <div class="p-list-item__right">
-                            <div class="p-list-item__image">
-                            <picture>
-                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog02sp.jpg">
-                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog02.png" alt="集客してる間は売れないという法則">
-                            </picture>
-                            </div>
-                            <div class="c-category p-list-item__category">
-                                集客方法
-                            </div>
-                        </div>
-                        <div class="p-list-item__textarea">
-                            <h3 class="p-list-item__title js-ellipsis25">
-                                集客してる間は売れないという法則
-                            </h3>
-                            <time datetime="0000-00-00" class="p-list-item__time">
-                                0000.00.00
-                            </time>
-                            <p class="p-list-item__article">
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                 <a href="./blog-details.html" class="p-list-section__item p-list-item">
-                    <div class="p-list-item__wrap">
-                        <div class="p-list-item__right">
-                            <div class="p-list-item__image">
-                            <picture>
-                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog03sp.jpg">
-                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog03.png" alt="フォロワーではなくファンを増やせとは？">
-                            </picture>
-                            </div>
-                            <div class="c-category p-list-item__category">
-                                SNS
-                            </div>
-                        </div>
-                        <div class="p-list-item__textarea">
-                            <h3 class="p-list-item__title js-ellipsis25">
-                                フォロワーではなくファンを増やせとは？
-                            </h3>
-                            <time datetime="0000-00-00" class="p-list-item__time">
-                                0000.00.00
-                            </time>
-                            <p class="p-list-item__article">
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                <a href="./blog-details.html" class="p-list-section__item p-list-item">
-                    <div class="p-list-item__wrap">
-                        <div class="p-list-item__right">
-                            <div class="p-list-item__image">
-                            <picture>
-                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog01sp.jpg">
-                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/blog-list/blog01.png" alt="技術面はプロによるマンツーマン授業！">
-                            </picture>
-                            </div>
-                            <div class="c-category p-list-item__category">
-                                ギター
-                            </div>
-                        </div>
-                        <div class="p-list-item__textarea">
-                            <h3 class="p-list-item__title js-ellipsis25">
-                                アルペジオが劇的に向上する3つの習慣
-                            </h3>
-                            <time datetime="0000-00-00" class="p-list-item__time">
-                                0000.00.00
-                            </time>
-                            <p class="p-list-item__article">
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                            </p>
-                        </div>
-                    </div>
-                </a> -->
             <?php
                 endwhile;
             endif;
             ?>
             </div>
             <!-- ページネーション -->
-             <ul class="c-pagination">
-                <li class="c-pagination__item c-pagination__active">
+             <div class="c-pager">
+                <?php wp_pagenavi(); ?>
+                <!-- <li class="c-pagination__item c-pagination__active">
                     <a>1</a>
                 </li>
                 <li class="c-pagination__item">
@@ -342,8 +94,8 @@
                 </li>
                 <li class="c-pagination__item">
                     <a href="./blog-list.html">9</a>
-                </li>
-             </ul>
+                </li> -->
+        </div>
             </div>
         </section>
     <?php get_template_part('template-parts/fix-area'); ?>

@@ -785,82 +785,68 @@ c-circle
 /* --------------
 c-pagination
 -----------------*/
-.c-pagination {
+.c-pager {
   margin-top: 4.5rem;
+}
+.c-pager .wp-pagenavi {
+  width: 100%;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  -moz-column-gap: 0.625rem;
+       column-gap: 0.625rem;
 }
 @media (max-width: 767px) {
-  .c-pagination {
-    margin-top: 3.6875rem;
+  .c-pager .wp-pagenavi {
+    -moz-column-gap: 0.3125rem;
+         column-gap: 0.3125rem;
   }
 }
-
-.c-pagination__item {
-  display: block;
-  margin-right: 0.625rem;
+.c-pager .wp-pagenavi .current,
+.c-pager .wp-pagenavi a {
   width: 3.125rem;
   height: 3.125rem;
+  font-size: 1.125rem;
+  line-height: 1;
+  font-weight: bold;
+  text-align: center;
   border: 0.0625rem solid #000;
+  display: grid;
+  place-content: center;
+  transition: all 0.4s;
 }
 @media (max-width: 767px) {
-  .c-pagination__item {
-    margin-right: 0.3125rem;
+  .c-pager .wp-pagenavi .current,
+  .c-pager .wp-pagenavi a {
     width: 2.75rem;
     height: 2.75rem;
+    font-size: 1rem;
   }
 }
-
-.c-pagination__item:last-child {
-  margin-right: 0;
+.c-pager .wp-pagenavi .current:hover,
+.c-pager .wp-pagenavi a:hover {
+  opacity: 1;
+  color: #fff;
+  background: #000;
 }
-
-.c-pagination__item a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
+.c-pager .wp-pagenavi .current {
+  color: #fff;
+  background: #000;
+}
+.c-pager .wp-pagenavi .extend {
+  display: inline-block;
+  padding-inline: 0.625rem;
+  padding-bottom: 0.625rem;
   font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 1.6666666667;
-  transition: all 0.5s ease;
+  font-weight: bold;
+  border: none;
 }
 @media (max-width: 767px) {
-  .c-pagination__item a {
+  .c-pager .wp-pagenavi .extend {
     font-size: 1rem;
-    line-height: 1.75;
-  }
-}
-.c-pagination__item a:hover {
-  background-color: #000;
-  color: #FFF;
-}
-
-.c-pagination__active {
-  background-color: #000;
-  color: #FFF;
-  transition: none;
-}
-
-.c-pagination__active a {
-  cursor: default;
-}
-
-.c-pagination__disable {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.125rem;
-  margin-inline: 0.625rem 1.25rem;
-}
-@media (max-width: 767px) {
-  .c-pagination__disable {
-    font-size: 1rem;
-    margin-inline: 0.4375rem 0.75rem;
+    padding-inline: 0.4375rem;
+    padding-bottom: 0.625rem;
   }
 }
 
