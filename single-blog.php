@@ -1,7 +1,8 @@
 <?php get_header(); ?>
     <main class="p-blog-details">
         <!-- パンくずリスト -->
-        <div class="p-result-details__breadcrumbs p-result-details-breadcrumbs p-breadcrumbs">
+        <?php get_template_part('template-parts/breadcrumbs'); ?>
+        <!-- <div class="p-result-details__breadcrumbs p-result-details-breadcrumbs p-breadcrumbs">
             <div class="p-result-details-breadcrumbs__inner p-breadcrumbs__inner l-inner">
                 <nav class="p-breadcrumbs__list">
                     <ul>
@@ -15,7 +16,7 @@
                     </ul>
                 </nav>
             </div>
-        </div>
+        </div> -->
         <!-- blog-details -->
         <div class="l-two-col-container l-inner">
             <!-- メイン  -->
