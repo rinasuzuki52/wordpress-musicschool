@@ -13,20 +13,7 @@
             </div>
         </section>
         <!-- パンくずリスト -->
-        <div class="p-blog-list__breadcrumbs p-blog-list-breadcrumbs p-breadcrumbs">
-            <div class="p-blog-list-breadcrumbs__inner p-breadcrumbs__inner l-inner">
-                <nav class="p-breadcrumbs__list">
-                    <ul>
-                       <?php if (function_exists('bcn_display')) {
-                            bcn_display();
-                        } ?> 
-                      <!-- <li><a class="p-breadcrumbs__link" href="./index.html">ホーム</a></li>
-                      <li><p class="p-breadcrumbs__item">＞</p></li>
-                      <li><p class="p-breadcrumbs__item">ブログ</p></li> -->
-                    </ul>
-                </nav>
-            </div>
-        </div>
+       <?php get_template_part('template-parts/breadcrumbs'); ?>
         
         <!-- blog-list -->
         <section class="p-blog-list__section p-list-section">

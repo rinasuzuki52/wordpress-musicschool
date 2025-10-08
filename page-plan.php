@@ -13,17 +13,7 @@
             </div>
         </section>
         <!-- パンくずリスト -->
-        <div class="p-plan__breadcrumbs p-plan-breadcrumbs p-breadcrumbs">
-            <div class="p-plan-breadcrumbs__inner p-breadcrumbs__inner l-inner">
-                <nav class="p-breadcrumbs__list">
-                    <ul>
-                      <li><a class="p-breadcrumbs__link" href="./index.html">ホーム</a></li>
-                      <li><p class="p-breadcrumbs__item">＞</p></li>
-                      <li><p class="p-breadcrumbs__item">プラン・料金</p></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+        <?php get_template_part('template-parts/breadcrumbs'); ?>
         <!-- price -->
         <section class="p-plan__price p-plan-price">
             <div class="p-plan-price__inner l-inner">
