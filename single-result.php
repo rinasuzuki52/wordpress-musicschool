@@ -3,25 +3,34 @@
         <!-- パンくずリスト -->
         <?php get_template_part('template-parts/breadcrumbs'); ?>
         <!-- result-details -->
+        <?php
+        if (have_posts()):
+            while (have_posts()):
+                the_post();
+        ?>
         <section class="p-result-details__section p-details">
             <div class="p-details__inner l-inner">
                 <div class="p-details__imagearea">
                     <div class="p-details__image">
-                        <picture>
-                            <source media="(max-width: 767px)" srcset="images/result-details/voice01sp.jpg">
-                            <img src="images/result-details/voice01.jpg" alt="タイトルが入ります">
-                        </picture>
+                        <?php if (has_post_thumbnail()) : ?>
+                            <?php the_post_thumbnail('large'); ?>
+                        <?php else : ?>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="No image">
+                         <?php endif; ?>
                     </div>
                     <div class="c-category p-details__category">
-                        ポップス
+                        <?php
+                        $terms = get_the_terms(get_the_ID(), 'genre');
+                        if (!empty($terms) && !is_wp_error($terms)) {
+                            echo $terms[0]->name;
+                        }
+                        ?>
                     </div>
                 </div>
                 <h1 class="p-details__title">
-                    タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                    <?php the_title(); ?>
                 </h1>
-                <time datetime="0000-00-00" class="p-details__time">
-                    0000.00.00
-                </time>
+                <time datetime="the_time('Y-m-d')"><?php the_time('Y.m.d'); ?></time>
                 <div class="p-details__tablearea">
                     <table class="p-details__table">
                         <tbody>
@@ -57,6 +66,10 @@
                 <?php get_template_part('template-parts/related-articles'); ?> 
             </div>
         </section>
+        <?php
+            endwhile;
+        endif;
+        ?>
      <?php get_template_part('template-parts/fix-area'); ?>
     </main>
     <?php get_footer(); ?>  
