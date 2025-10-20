@@ -2,21 +2,6 @@
     <main class="p-blog-details">
         <!-- パンくずリスト -->
         <?php get_template_part('template-parts/breadcrumbs'); ?>
-        <!-- <div class="p-result-details__breadcrumbs p-result-details-breadcrumbs p-breadcrumbs">
-            <div class="p-result-details-breadcrumbs__inner p-breadcrumbs__inner l-inner">
-                <nav class="p-breadcrumbs__list">
-                    <ul>
-                      <li><a class="p-breadcrumbs__link" href="./index.html">ホーム</a></li>
-                      <li><p class="p-breadcrumbs__item">></p></li>
-                      <li><a class="p-breadcrumbs__link" href="./blog-list.html">ブログ</a></li>
-                      <li><p class="p-breadcrumbs__item">></p></li>
-                      <li><a class="p-breadcrumbs__link" href="./blog-list.html">ギター</a></li>
-                      <li><p class="p-breadcrumbs__item">></p></li>
-                      <li><p class="p-breadcrumbs__item">アルペジオが劇的に向上する３つの習慣</p></li>
-                    </ul>
-                </nav>
-            </div>
-        </div> -->
         <!-- blog-details -->
         <div class="l-two-col-container l-inner">
             <!-- メイン  -->
