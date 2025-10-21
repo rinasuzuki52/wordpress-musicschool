@@ -36,32 +36,37 @@
                         <tbody>
                             <tr>
                                 <td>名前</td>
-                                <td>丸山</td>
+                                <td><?php the_field('name'); ?></td>
                             </tr>
                             <tr>
                                 <td>職業</td>
-                                <td>証券会社勤務</td>
+                                <td><?php the_field('job'); ?></td>
                             </tr>
                             <tr>
                                 <td>ジャンル</td>
-                                <td>入力欄</td>
+                                <td>
+                                    <?php
+                                    $terms = get_the_terms(get_the_ID(), 'genre');
+                                    echo $terms[0]->name;
+                                    ?>
+                                </td>
                             </tr>
                             <tr>
                                 <td>実績</td>
-                                <td>入力欄</td>
+                                <td><?php the_field('achievements'); ?></td>
                             </tr>
                             <tr>
                                 <td>SNS</td>
-                                <td>入力欄</td>
+                                <td><?php the_field('sns'); ?></td>
                             </tr>
                         </tbody>
                     </table>
-                    <p class="p-details__text">
-                        昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。
-                    </p>
+                    <div class="p-details__text"><?php the_content(); ?></div>
                 </div>
+
                 <!-- ページネーション  -->
                 <?php get_template_part('template-parts/single-pagination'); ?>
+                
                 <!-- 関連記事 -->
                 <?php get_template_part('template-parts/related-articles'); ?> 
             </div>
