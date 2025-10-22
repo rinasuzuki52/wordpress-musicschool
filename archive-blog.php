@@ -67,23 +67,8 @@
             <!-- ページネーション -->
              <div class="c-pager">
                 <?php wp_pagenavi(); ?>
-                <!-- <li class="c-pagination__item c-pagination__active">
-                    <a>1</a>
-                </li>
-                <li class="c-pagination__item">
-                    <a href="./blog-list.html">2</a>
-                </li>
-                <li class="c-pagination__item">
-                    <a href="./blog-list.html">3</a>
-                </li>
-                <li class="c-pagination__disable">
-                    <span>…</span>
-                </li>
-                <li class="c-pagination__item">
-                    <a href="./blog-list.html">9</a>
-                </li> -->
-        </div>
             </div>
+        </div>
         </section>
     <?php get_template_part('template-parts/fix-area'); ?>
     </main>
