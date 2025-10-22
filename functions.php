@@ -70,3 +70,14 @@ function my_page_conditions($query)
   }
 }
 add_action('pre_get_posts', 'my_page_conditions');
+
+
+// --------------------------------------------------
+//管理画面で投稿を非表示
+// --------------------------------------------------
+
+function remove_menus () {
+  global $menu;
+  remove_menu_page( 'edit.php' );
+}
+add_action('admin_menu', 'remove_menus');
