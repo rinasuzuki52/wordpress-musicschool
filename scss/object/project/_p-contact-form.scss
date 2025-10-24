@@ -97,58 +97,68 @@
     align-items: flex-start;
     flex-direction: column;
     row-gap: rem(20);
-}
-
-.p-form__checkbox {
+    .wpcf7-list-item {
+    margin: 0;
+  }
+  
+  .wpcf7-checkbox {
     display: flex;
-}
-
-.p-form__checkbox input {
-    cursor: pointer;
-}
-
-.p-form__checkbox span {
-    font-size: rem(18);
-    line-height: rem(20);
-    position: relative;
-    padding-left: rem(40);
-    cursor: pointer;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: rem(9);
+          
     @include sp {
-        font-size: rem(16);
-        line-height: calc(30 / 16);
-        padding-left: rem(30);
+      row-gap: rem(13);
     }
 }
-
-.p-form__checkbox span::before {
-    content: "";
-    width: rem(20);
-    height: rem(20);
-    background: $font-color2;
-    border: rem(0.5) solid $font-color1;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    z-index: 9;
+label {
+    cursor: pointer;
+    
+    input[type="checkbox"] {
+      display: none;
+            
+      &+span {
+        display: inline-block;
+        padding-left: rem(40);
+        position: relative;
+        
+        @include sp {
+          padding-left: rem(30);
+        }
+              
+        &::before {
+          content: "";
+          width: rem(20);
+          height: rem(20);
+          border: rem(0.5) solid #000;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+              
+        &::after {
+          content: "";
+          width: rem(16);
+          height: rem(8);
+          border-left: rem(4) solid #000;
+          border-bottom: rem(2) solid #000;
+          position: absolute;
+          top: 50%;
+          left: rem(2);
+          transform: translateY(calc(-50% - rem(2))) rotate(-50deg);
+          display: none;
+        }
+    } 
+      &:checked {
+        &+span {
+          &::after {
+            display: block;
+          }
+        }
+      }
+    }
 }
-
-.p-form__checkbox span::after {
-    content: "";
-    width: rem(17);
-    height: rem(9);
-    border-left: rem(3) solid $main-color;
-    border-bottom: rem(4) solid $main-color;
-    position: absolute;
-    top: 45%;
-    left: rem(2);
-    transform: translateY(-50%) rotate(-55deg);
-    display: none;
-    z-index: 10;
-}
-
-.p-form__checkbox input:checked + span::after {
-  display: block;
 }
 
 .p-form__textarea {
@@ -178,6 +188,20 @@
     height: rem(50);
     font-size: rem(25);
     line-height: calc(33 / 25);
+    color: $font-color2; 
+    background-color: $main-color;
+    border: $main-color solid;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+     color: $main-color;
+     background-color: $font-color2;
+    }
     @include sp {
         width: rem(335);
         font-size: rem(20);
