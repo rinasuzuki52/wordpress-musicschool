@@ -3156,6 +3156,37 @@ c-side-title
   }
 }
 
+.wpcf7-not-valid-tip {
+  margin-top: 6px;
+  color: #cb0000;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+  border: none;
+  font-size: 1.125rem;
+  text-align: center;
+  color: #cb0000;
+}
+@media (max-width: 767px) {
+  .wpcf7 form.invalid .wpcf7-response-output {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  border: none;
+  font-size: 1.125rem;
+  text-align: center;
+  color: #cb0000;
+}
+@media (max-width: 767px) {
+  .wpcf7 form.sent .wpcf7-response-output {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
 .p-contact-send__area {
   padding-block: 4.25rem 5.625rem;
 }
