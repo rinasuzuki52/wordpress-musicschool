@@ -10,14 +10,8 @@
                 )
                 );
                 ?>
-                <!-- <ul class="p-footer-nav__lists">
-                    <li class="p-footer-nav__list"><a href="./index.html">ホーム</a></li>
-                    <li class="p-footer-nav__list"><a href="./plan.html">料金</a></li>
-                    <li class="p-footer-nav__list"><a href="./blog-list.html">ブログ</a></li>
-                    <li class="p-footer-nav__list"><a href="./result-list.html">卒業実績</a></li>
-                </ul> -->
             </nav>
-            <a class="p-footer__logo" href="./index.html">
+            <a class="p-footer__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <img srcset="<?php echo get_template_directory_uri(); ?>/images/logo-white.svg" alt="きたむらミュージックスクール">
             </a>
             <p class="p-footer__copyright">
