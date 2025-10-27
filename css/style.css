@@ -868,17 +868,10 @@ c-side-title
 }
 
 .p-top-fv {
-  margin-top: 5rem;
   width: 100%;
   position: relative;
   overflow: hidden;
 }
-@media (max-width: 767px) {
-  .p-top-fv {
-    margin-top: 3.125rem;
-  }
-}
-
 .p-top-fv__bg {
   width: 100%;
   position: relative;
@@ -1831,7 +1824,7 @@ c-side-title
   }
 }
 
-.p-header-nav__list {
+.p-header-nav__lists a {
   height: 100%;
   display: flex;
   padding-inline: 0.625rem;
@@ -1843,11 +1836,11 @@ c-side-title
   position: relative;
   transition: 0.3s;
 }
-.p-header-nav__list:hover {
+.p-header-nav__lists a:hover {
   opacity: 0.7;
 }
 @media (max-width: 767px) {
-  .p-header-nav__list {
+  .p-header-nav__lists a {
     width: 100%;
     height: 100%;
     padding-inline: 1.25rem;
@@ -1855,7 +1848,7 @@ c-side-title
     line-height: 1.8333333333;
     color: #FFF;
   }
-  .p-header-nav__list:hover {
+  .p-header-nav__lists a:hover {
     background-color: #000;
     opacity: 1;
   }
@@ -1959,7 +1952,7 @@ c-side-title
   }
 }
 
-.p-footer-nav__list a {
+.p-footer-nav__lists a {
   font-size: 1.0625rem;
   line-height: 1.9411764706;
   font-weight: 600;
@@ -1967,22 +1960,15 @@ c-side-title
   transition: all 0.3s ease;
   cursor: pointer;
 }
-.p-footer-nav__list a:hover {
+.p-footer-nav__lists a:hover {
   opacity: 0.7;
 }
 
 .p-fv-lower {
-  margin-top: 5rem;
   width: 100%;
   position: relative;
   overflow: hidden;
 }
-@media (max-width: 767px) {
-  .p-fv-lower {
-    margin-top: 3.125rem;
-  }
-}
-
 .p-fv-lower__bg {
   width: 100%;
   position: relative;
