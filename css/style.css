@@ -1722,7 +1722,6 @@ c-side-title
 }
 
 .p-header__btn {
-  margin-left: 1.4375rem;
   width: 9.375rem;
   height: 2.8125rem;
   font-size: 0.9375rem;
@@ -1794,6 +1793,7 @@ c-side-title
 .p-header-nav__lists {
   height: 100%;
   display: flex;
+  align-items: center;
   -moz-column-gap: 0.8125rem;
        column-gap: 0.8125rem;
 }
@@ -1870,6 +1870,18 @@ c-side-title
     left: 0;
   }
 }
+.p-header-nav__lists li:last-child {
+  height: 2.8125rem;
+  justify-content: center;
+  align-items: center;
+}
+.p-header-nav__lists li:last-child a {
+  color: #fff;
+}
+.p-header-nav__lists li:last-child a:hover {
+  color: #cb0000;
+}
+
 .p-footer {
   background-color: #cb0000;
   color: #FFF;

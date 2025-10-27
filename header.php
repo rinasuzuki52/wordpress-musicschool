@@ -71,7 +71,6 @@
                         <li><a href="./result-list.html" class="p-header-nav__list">卒業実績</a></li>
                     </ul> -->
                 </nav>
-                <a href="./contact-form.html" class="c-btn p-header__btn u-pc">お問い合わせ</a>
             </div>
         </div>
     </header>
