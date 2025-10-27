@@ -55,12 +55,21 @@
                     <span></span>
                     <span></span>
                 </div>
-                <nav class="p-header__nav p-header-nav">
-                    <ul class="p-header-nav__lists">
+                <nav class="p-header__nav p-header-nav" aria-label="ヘッダーナビゲーション">
+                    <?php
+                    wp_nav_menu(
+                    array(
+                        'menu_class'     => 'p-header-nav__lists',
+                        'theme_location' => 'primary',
+                        'container'      => false,
+                    )
+                    );
+                    ?>
+                    <!-- <ul class="p-header-nav__lists">
                         <li><a href="./plan.html" class="p-header-nav__list">料金</a></li>
                         <li><a href="./blog-list.html" class="p-header-nav__list">ブログ</a></li>
                         <li><a href="./result-list.html" class="p-header-nav__list">卒業実績</a></li>
-                    </ul>
+                    </ul> -->
                 </nav>
                 <a href="./contact-form.html" class="c-btn p-header__btn u-pc">お問い合わせ</a>
             </div>
