@@ -36,7 +36,6 @@
 }
 
 .p-header__btn {
-    margin-left: rem(23);
     width: rem(150);
     height: rem(45);
     font-size: rem(15);
@@ -107,6 +106,7 @@
 .p-header-nav__lists {
     height: 100%;
     display: flex;
+    align-items: center;
     column-gap: rem(13);
     @include sp {
         display: block;
@@ -181,3 +181,21 @@
 }
 
 
+// ==========================================================================
+// ヘッダー調整
+// ==========================================================================
+.p-header-nav__lists {
+  li {
+    &:last-child {
+      height: rem(45); // ←お好みの高さに変更
+      justify-content: center;
+      align-items: center;
+      a {
+        color: #fff;
+        &:hover {
+            color: $main-color;
+        }
+      }
+    }
+  }
+}
