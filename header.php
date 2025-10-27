@@ -65,11 +65,6 @@
                     )
                     );
                     ?>
-                    <!-- <ul class="p-header-nav__lists">
-                        <li><a href="./plan.html" class="p-header-nav__list">料金</a></li>
-                        <li><a href="./blog-list.html" class="p-header-nav__list">ブログ</a></li>
-                        <li><a href="./result-list.html" class="p-header-nav__list">卒業実績</a></li>
-                    </ul> -->
                 </nav>
             </div>
         </div>
