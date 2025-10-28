@@ -122,7 +122,37 @@
                     生徒さんたちの声
                 </h2>
                     <div class="p-voice__slider p-voice-slider">
-                        <a href="./result-details.html" class="p-voice-slider__card p-slider-card">
+                        <?php
+                        $args = array(
+                            'post_type' => 'result',
+                            'posts_per_page' => 6,
+                        );
+                        $the_query = new WP_Query($args);
+                        if ($the_query->have_posts()) :
+                            while ($the_query->have_posts()) : $the_query->the_post();
+                        ?>
+                            <a href="<?php the_permalink(); ?>" class="p-voice-slider__card p-slider-card">
+                            <div class="p-slider-card__img">
+                                <?php if (has_post_thumbnail()) : ?>
+                                <?php the_post_thumbnail(); ?>
+                                <?php else : ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="No image">
+                                <?php endif; ?>
+                            </div>
+                            <div class="p-slider-card__name">
+                                <h3><?php the_field('job'); ?>&emsp;<?php the_field('name'); ?>さん</h3>
+                            </div>
+                            <div class="p-slider-card__comment">
+                                <p><?php echo wp_trim_words(get_the_content(), 42, '...'); ?></p>
+                            </div>
+                            </a>
+                        <?php
+                            endwhile;
+                        endif;
+                        wp_reset_postdata();
+                        ?>
+
+                        <!-- <a href="./result-details.html" class="p-voice-slider__card p-slider-card">
                             <div class="p-slider-card__img">
                                 <picture>
                                     <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/top/voice01-sp.jpg">
@@ -181,7 +211,7 @@
                             </div>
                             <h3 class="p-slider-card__name">都内大学生　田森さん</h3>
                             <p class="p-slider-card__comment">就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。</p>
-                        </a>
+                        </a> -->
                     </div>
             </div>
         </section>
