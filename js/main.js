@@ -39,8 +39,8 @@ $(document).ready(function(){
     slidesToScroll: 1,
     infinite: true,
     arrows: true,
-    prevArrow: '<img src="images/top/arrow-l.svg" class="slick-prev" alt="前へ">',
-    nextArrow: '<img src="images/top/arrow-r.svg" class="slick-next" alt="次へ">',
+    prevArrow: '<img src="/images/top/arrow-l.svg" class="slick-prev" alt="前へ">',
+    nextArrow: '<img src="/images/top/arrow-r.svg" class="slick-next" alt="次へ">',
     responsive: [
       {
         breakpoint: 768,
