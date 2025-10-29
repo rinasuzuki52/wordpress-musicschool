@@ -25,7 +25,7 @@
     <!-- Webフォント -->
 <?php wp_head(); ?>
 </head>
-<body>
+<body style="display: none;">
 <div id="container">
     <header class="l-header p-header">
         <div class="p-header__inner">
