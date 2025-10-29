@@ -327,24 +327,43 @@
                     ブログ
                 </h2>
                 <div class="p-top-blog__lists">
-                    <a href="./blog-details.html" class="p-top-blog__card p-blog-card">
+                    <?php
+                    $args = array(
+                    'posts_per_page' => 3,
+                    'post_type' => 'blog',
+                    'taxonomy' => 'blog_recommend',
+                    'term' => 'recommend',
+                    'orderby' => 'date',
+                    'order' => 'DESC'
+                    );
+                    $the_query = new WP_Query($args);
+                    if ($the_query->have_posts()) :
+                    while ($the_query->have_posts()) : $the_query->the_post();
+                    ?>
+                    <a href="<?php the_permalink(); ?>" class="p-top-blog__card p-blog-card">
                         <div class="p-blog-card__image">
-                            <picture>
-                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/top/blog03-sp.jpg">
-                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/top/blog03.jpg" alt="フォロワーではなくファンを増やせとは？">
-                            </picture>
+                            <?php if (has_post_thumbnail()) : ?>
+                                <?php the_post_thumbnail(); ?>
+                            <?php else : ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="No image">
+                            <?php endif; ?>
                         </div>
                         <p class="c-category p-blog-card__category">
-                            SNS
+                           <?php
+                            $terms = get_the_terms(get_the_ID(), 'blog_cate');
+                            if (!empty($terms) && !is_wp_error($terms)) {
+                            echo esc_html($terms[0]->name);
+                            }
+                            ?> 
                         </p>
                         <h3 class="p-blog-card__title js-ellipsis25">
-                            フォロワーではなくファンを増やせとは？
+                            <?php echo get_the_title(); ?>
                         </h3>
-                        <time datetime="0000-00-00" class="p-blog-card__date">
-                            0000.00.00
+                        <time datetime="<?php the_time('Y-m-d'); ?>" class="p-blog-card__date">
+                            <?php the_time('Y.m.d'); ?>
                         </time>
                     </a>
-                    <a href="./blog-details.html" class="p-blog-card">
+                    <!-- <a href="./blog-details.html" class="p-blog-card">
                         <div class="p-blog-card__image">
                             <picture>
                                 <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/top/blog02-sp.jpg">
@@ -377,10 +396,15 @@
                         <time datetime="0000-00-00" class="p-blog-card__date">
                             0000.00.00
                         </time>
-                    </a>
+                    </a> -->
+                     <?php
+                    endwhile;
+                    endif;
+                    wp_reset_postdata();
+                    ?>
                 </div>
                 <div class="p-top-blog__more">
-                    <a href="./blog-list.html" class="p-top-blog__link">
+                    <a href="<?php echo esc_url(home_url('blog')); ?>" class="p-top-blog__link">
                     ブログ一覧へ
                     </a>
                 </div>
