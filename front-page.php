@@ -136,7 +136,7 @@
                                 <?php if (has_post_thumbnail()) : ?>
                                 <?php the_post_thumbnail(); ?>
                                 <?php else : ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="No image">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="No image">
                                 <?php endif; ?>
                             </div>
                             <div class="p-slider-card__name">
@@ -151,67 +151,6 @@
                         endif;
                         wp_reset_postdata();
                         ?>
-
-                        <!-- <a href="./result-details.html" class="p-voice-slider__card p-slider-card">
-                            <div class="p-slider-card__img">
-                                <picture>
-                                    <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/top/voice01-sp.jpg">
-                                    <img srcset="<?php echo get_template_directory_uri(); ?>/images/top/voice01.jpg" alt="証券会社勤務丸山さん">
-                                </picture>
-                            </div>
-                            <h3 class="p-slider-card__name">　証券会社勤務　丸山さん</h3>
-                            <p class="p-slider-card__comment">昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
-                        </a>
-                        <a href="./result-details.html" class="p-voice-slider__card p-slider-card">
-                            <div class="p-slider-card__img">
-                                <picture>
-                                    <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/top/voice02-sp.jpg">
-                                    <img srcset="<?php echo get_template_directory_uri(); ?>/images/top/voice02.jpg" alt="IT会社勤務S.Eさん">
-                                </picture>
-                            </div>
-                            <h3 class="p-slider-card__name">IT会社勤務　S.Eさん</h3>
-                            <p class="p-slider-card__comment">プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。</p>
-                        </a>
-                        <a href="./result-details.html" class="p-voice-slider__card p-slider-card">
-                            <div class="p-slider-card__img">
-                                <picture>
-                                    <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/top/voice03-sp.jpg">
-                                    <img srcset="<?php echo get_template_directory_uri(); ?>/images/top/voice03.jpg" alt="都内大学生田森さん">
-                                </picture>
-                            </div>
-                            <h3 class="p-slider-card__name">都内大学生　田森さん</h3>
-                            <p class="p-slider-card__comment">就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。</p>
-                        </a>
-                        <a href="./result-details.html" class="p-voice-slider__card p-slider-card">
-                            <div class="p-slider-card__img">
-                                <picture>
-                                    <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/top/voice01-sp.jpg">
-                                    <img srcset="<?php echo get_template_directory_uri(); ?>/images/top/voice01.jpg" alt="証券会社勤務丸山さん">
-                                </picture>
-                            </div>
-                            <h3 class="p-slider-card__name">証券会社勤務　丸山さん</h3>
-                            <p class="p-slider-card__comment">昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
-                        </a>
-                        <a href="./result-details.html" class="p-voice-slider__card p-slider-card">
-                            <div class="p-slider-card__img">
-                                <picture>
-                                    <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/top/voice02-sp.jpg">
-                                    <img srcset="<?php echo get_template_directory_uri(); ?>/images/top/voice02.jpg" alt="IT会社勤務S.Eさん">
-                                </picture>
-                            </div>
-                            <h3 class="p-slider-card__name">IT会社勤務　S.Eさん</h3>
-                            <p class="p-slider-card__comment">プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。</p>
-                        </a>
-                        <a href="./result-details.html" class="p-voice-slider__card p-slider-card">
-                            <div class="p-slider-card__img">
-                                <picture>
-                                    <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/top/voice03-sp.jpg">
-                                    <img srcset="<?php echo get_template_directory_uri(); ?>/images/top/voice03.jpg" alt="都内大学生田森さん">
-                                </picture>
-                            </div>
-                            <h3 class="p-slider-card__name">都内大学生　田森さん</h3>
-                            <p class="p-slider-card__comment">就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。</p>
-                        </a> -->
                     </div>
             </div>
         </section>
@@ -345,7 +284,7 @@
                             <?php if (has_post_thumbnail()) : ?>
                                 <?php the_post_thumbnail(); ?>
                             <?php else : ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="No image">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="No image">
                             <?php endif; ?>
                         </div>
                         <p class="c-category p-blog-card__category">
@@ -363,40 +302,6 @@
                             <?php the_time('Y.m.d'); ?>
                         </time>
                     </a>
-                    <!-- <a href="./blog-details.html" class="p-blog-card">
-                        <div class="p-blog-card__image">
-                            <picture>
-                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/top/blog02-sp.jpg">
-                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/top/blog02.jpg" alt="集客してる間は売れないという法則">
-                            </picture>
-                        </div>
-                        <p class="c-category p-blog-card__category">
-                            集客方法
-                        </p>
-                        <h3 class="p-blog-card__title js-ellipsis25">
-                            集客してる間は売れないという法則
-                        </h3>
-                        <time datetime="0000-00-00" class="p-blog-card__date">
-                            0000.00.00
-                        </time>
-                    </a>
-                    <a href="./blog-details.html" class="p-blog-card">
-                        <div class="p-blog-card__image">
-                            <picture>
-                                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/images/top/blog01-sp.jpg">
-                                <img srcset="<?php echo get_template_directory_uri(); ?>/images/top/blog01.jpg" alt="アルペジオが劇的に向上する3つの習慣">
-                            </picture>
-                        </div>
-                        <p class="c-category p-blog-card__category">
-                            ギター
-                        </p>
-                        <h3 class="p-blog-card__title js-ellipsis25">
-                            アルペジオが劇的に向上する3つの習慣
-                        </h3>
-                        <time datetime="0000-00-00" class="p-blog-card__date">
-                            0000.00.00
-                        </time>
-                    </a> -->
                      <?php
                     endwhile;
                     endif;

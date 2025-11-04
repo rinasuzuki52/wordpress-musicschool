@@ -5,6 +5,11 @@
         <!-- search-list -->
         <section class="p-search__list p-search-list">
             <div class="p-search-list__inner l-inner">
+                    <?php if (!empty(get_search_query())): ?>
+                    <?php
+                    if (have_posts()):
+                    $total_posts = $wp_query->found_posts;
+                    ?>
                 <div class="p-search-list__keyword">
                     <h1 class="p-search-list__title">
                         「<span><?php echo get_search_query(); ?></span>」の検索結果
@@ -23,7 +28,7 @@
                                 <?php if (has_post_thumbnail()) : ?>
                                     <?php the_post_thumbnail(); ?>
                                 <?php else : ?>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="No image">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="No image">
                                 <?php endif; ?>
                             </div>
                             <div class="c-category p-list-item__category">
@@ -311,13 +316,13 @@
             <?php else : ?>
             <div class="p-search-result__no-result">
                 <p>検索されたキーワードにマッチする<br class="pc-none">記事はありませんでした。</p>
-                <a onclick="history.back()" class="c-button c-button--main">戻る</a>
+                <a onclick="history.back()" class="p-search-result__btn c-btn">戻る</a>
             </div>
             <?php endif; ?>
         <?php else: ?>
             <div class="p-search-result__no-result">
             <p>検索キーワードが未入力です。</p>
-            <a onclick="history.back()" class="c-button c-button--main">戻る</a>
+            <a onclick="history.back()" class="p-search-result__btn c-btn">戻る</a>
             </div>
         <?php endif; ?>
         </div>

@@ -37,7 +37,7 @@
                                  <?php if (has_post_thumbnail()) : ?>
                                     <?php the_post_thumbnail(); ?>
                                 <?php else : ?>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="No image">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="No image">
                                 <?php endif; ?>
                                 </div>
                                 <div class="c-category p-result-section__category">
