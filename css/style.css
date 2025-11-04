@@ -2944,6 +2944,32 @@ c-side-title
   }
 }
 
+.p-search-result__no-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.875rem;
+}
+.p-search-result__no-result p {
+  font-size: 1rem;
+  line-height: 1.875;
+  text-align: center;
+}
+
+.p-search-result__btn {
+  width: 15.625rem;
+  height: 3.125rem;
+  font-size: 1.5625rem;
+  line-height: 1.32;
+}
+@media (max-width: 767px) {
+  .p-search-result__btn {
+    width: 20.9375rem;
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+}
+
 .p-contact-form__area {
   padding-block: 4.25rem 6.25rem;
 }
