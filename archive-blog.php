@@ -27,7 +27,7 @@
             while (have_posts()):
             the_post();
             ?>
-                <a href="./blog-details.html" class="p-list-section__item p-list-item">
+                <a href="<?php the_permalink(); ?>" class="p-list-section__item p-list-item">
                     <div class="p-list-item__wrap">
                         <div class="p-list-item__right">
                             <div class="p-list-item__image">

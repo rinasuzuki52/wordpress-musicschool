@@ -27,7 +27,7 @@
                         the_post();
                 ?>
                     <div class="p-result-section__item">
-                        <a href="result-details.html">
+                        <a href="<?php the_permalink(); ?>">
                             <div class="<?php the_permalink(); ?>">
                                 <div class="p-result-section__image">
                                  <?php if (has_post_thumbnail()) : ?>
