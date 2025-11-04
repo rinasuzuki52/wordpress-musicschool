@@ -8,12 +8,12 @@
 // ==========================================================================
 
 .p-top-fv {
-    // margin-top: rem(80);
+    margin-top: rem(80);
     width: 100%;
     position: relative;
     overflow: hidden;
     @include sp {
-        // margin-top: rem(50);
+        margin-top: rem(50);
     }
 }
 

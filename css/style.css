@@ -538,7 +538,6 @@ img {
 .l-header {
   width: 100%;
   position: fixed; /* ヘッダーを固定 */
-  top: 0; /* 上部に配置 */
   z-index: 999; /* 表示順序を設定 */
 }
 
@@ -868,10 +867,17 @@ c-side-title
 }
 
 .p-top-fv {
+  margin-top: 5rem;
   width: 100%;
   position: relative;
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  .p-top-fv {
+    margin-top: 3.125rem;
+  }
+}
+
 .p-top-fv__bg {
   width: 100%;
   position: relative;
@@ -1977,10 +1983,17 @@ c-side-title
 }
 
 .p-fv-lower {
+  margin-top: 5rem;
   width: 100%;
   position: relative;
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  .p-fv-lower {
+    margin-top: 3.125rem;
+  }
+}
+
 .p-fv-lower__bg {
   width: 100%;
   position: relative;
