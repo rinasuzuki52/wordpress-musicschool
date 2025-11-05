@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <<?php
+    <?php
   // トップページ（フロントページ）の場合
   if (is_front_page()): ?>
     <title>きたむらミュージックスクール | 「音楽で生きる」を叶える ミュージックスクール</title>
@@ -93,14 +93,14 @@
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
     <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon180x180.png">
     <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/images/favicon.svg">
-    <!-- <meta property="og:title" content="きたむらミュージックスクール">
+    <meta property="og:title" content="きたむらミュージックスクール">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://rina-suzuki.com/musicschool/images/ogp.jpg">
     <meta property="og:url" content="https://rina-suzuki.com/musicschool/">
     <meta property="og:description" content="音楽業界初！収益化までサポートするミュージックスクールです">
     <meta property="og:site_name" content="きたむらミュージックスクール">
     <meta property="og:locale" content="ja_JP">
-    <meta name="twitter:card" content="Summary with Large Image"> -->
+    <meta name="twitter:card" content="Summary with Large Image">
     <!-- Webフォント -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
