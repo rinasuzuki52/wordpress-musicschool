@@ -52,8 +52,8 @@ $(function(){
     slidesToScroll: 1,
     infinite: true,
     arrows: true,
-    prevArrow: '<img src="http://rina-musicschool.local/wp-content/uploads/2025/10/arrow-l.svg" class="slick-prev" alt="前へ">',
-    nextArrow: '<img src="http://rina-musicschool.local/wp-content/uploads/2025/10/arrow-r.svg" class="slick-next" alt="次へ">',
+    prevArrow: '<img src="https://rina-suzuki.com/musicschool/wp-content/uploads/2025/10/arrow-l.svg" class="slick-prev" alt="前へ">',
+    nextArrow: '<img src="https://rina-suzuki.com/musicschool/wp-content/uploads/2025/10/arrow-r.svg" class="slick-next" alt="次へ">',
     responsive: [
       {
         breakpoint: 768,
