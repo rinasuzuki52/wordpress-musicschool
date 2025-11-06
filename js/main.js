@@ -47,28 +47,24 @@ $(function(){
   // -----------------------------------
   // スライダー
   // -----------------------------------
-  $('.p-voice-slider').slick({
+ $(".slider").slick({
+    infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    infinite: true,
-    arrows: true,
-    prevArrow: '<img src="https://rina-suzuki.com/musicschool/wp-content/uploads/2025/10/arrow-l.svg" class="slick-prev" alt="前へ">',
-    nextArrow: '<img src="https://rina-suzuki.com/musicschool/wp-content/uploads/2025/10/arrow-r.svg" class="slick-next" alt="次へ">',
     responsive: [
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          arrows: true,
-          dots: false
-        }
-      }
-    ]
+        },
+      },
+    ],
   });
 
   // -----------------------------------
   // トップへ戻るボタン・お問い合わせボタン
   // -----------------------------------
+
   const btn = $('.js-contact-btn');
   const topArrow = $('.c-back-btn');
   const footer = $('.l-footer');

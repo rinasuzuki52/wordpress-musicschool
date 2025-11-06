@@ -27,6 +27,7 @@ add_action('after_setup_theme', 'custom_theme_setup');
 // --------------------------------------------------
 //ファイル読み込み
 // --------------------------------------------------
+
 function add_files()
 {
   $now = date('YmdHis');
