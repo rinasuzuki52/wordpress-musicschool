@@ -122,11 +122,12 @@ function add_file_types_to_uploads($file_types){
 add_action('upload_mimes', 'add_file_types_to_uploads');
 
 
-function my_enqueue_scripts() {
-  // jQueryを読み込み（すでに読み込んでいれば不要）
-  wp_enqueue_script('jquery');
 
-  // メインJS読み込み
+
+
+function my_enqueue_scripts() {
+
+// メインJS読み込み
   wp_enqueue_script(
     'main-js',
     get_theme_file_uri('/js/main.js'),
@@ -135,7 +136,7 @@ function my_enqueue_scripts() {
     true
   );
 
-  // JSへテーマURLを渡す
+// JSへテーマURLを渡す
   wp_localize_script('main-js', 'themeVars', array(
     'themeUrl' => get_template_directory_uri()
   ));
