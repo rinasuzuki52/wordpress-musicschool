@@ -107,7 +107,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    column-gap: rem(13);
+    column-gap: rem(16);
     @include sp {
         display: block;
         width: rem(300);
