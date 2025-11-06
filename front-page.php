@@ -121,7 +121,7 @@
                 <h2 class="p-top-voice__title c-title">
                     生徒さんたちの声
                 </h2>
-                    <div class="p-voice__slider p-voice-slider">
+                    <div class="p-voice__slider p-voice-slider slider">
                         <?php
                         $args = array(
                             'post_type' => 'result',
