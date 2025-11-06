@@ -426,8 +426,8 @@
 
 // 矢印
  .slick-arrow {
-    width: 2.8rem;
-    height: 4rem;
+    width: rem(29);
+    height: rem(40);
     position: absolute;
     z-index: 2;
     background-size: contain;
@@ -436,29 +436,29 @@
     color: transparent;
   }
   .slick-next {
-    top: 38%;
-    right: -2.8rem;
+    top: 37%;
+    right: rem(-28);
     background-image: url(https://rina-suzuki.com/musicschool/wp-content/uploads/2025/10/arrow-r.svg) !important;
     &:hover {
         opacity: 0.7;
     }
     @include sp {
-      top: 39%;
-      right: 0.5rem;
+      top: 36%;
+      right: rem(4);
       background-image: url(https://rina-suzuki.com/musicschool/wp-content/uploads/2025/10/arrow-r.svg) !important;
     }
   }
   .slick-prev {
-    top: 38%;
-    left: -2.8rem;
+    top: 37%;
+    left: rem(-28);
     background-image: url(https://rina-suzuki.com/musicschool/wp-content/uploads/2025/10/arrow-l.svg) !important;
     transition: all .3s;
     &:hover {
         opacity: 0.7;
     }
     @include sp {
-      top: 39%;
-      left: 0.5rem;
+      top: 36%;
+      left: rem(4);
       background-image: url(https://rina-suzuki.com/musicschool/wp-content/uploads/2025/10/arrow-l.svg) !important;
     }
   }
@@ -827,7 +827,7 @@
 
 .p-blog-card__date {
     display: block;
-    margin-top: rem(11);
+    // margin-top: rem(11);
     font-size: rem(17);
     line-height: calc(30 / 17);
     text-align: right;
