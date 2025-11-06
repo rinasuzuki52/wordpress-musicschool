@@ -57,6 +57,13 @@
     }
 }
 
+.p-breadcrumbs__list a {
+    transition: all .3s;
+    &:hover {
+    opacity: 0.5;
+    }
+}
+
 .p-breadcrumbs__link {
     height: 100%;
     font-size: rem(16);
