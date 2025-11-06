@@ -4,7 +4,7 @@
                         <p>無料メールマガジン</p>
                     </div>
                     <div class="p-side-magazine__contents">
-                        <a href="./blog-details.html" class="p-side-magazine__banner">
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="p-side-magazine__banner">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/bannerarticle.jpg" alt="バナー広告">
                             <p>バナー広告</p>
                         </a>
