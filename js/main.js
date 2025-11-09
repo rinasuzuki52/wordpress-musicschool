@@ -12,54 +12,54 @@ $(function(){
     $('.p-header-nav__lists').toggleClass('active');
   });
 
-  // -----------------------------------
-  // アコーディオン
-  // -----------------------------------
+//   // -----------------------------------
+//   // アコーディオン
+//   // -----------------------------------
 
-  $('.p-qa-list__a').hide();
+//   $('.p-qa-list__a').hide();
 
-  // 既存のクリックを外して、名前空間付きで1回だけバインド
-  $('.p-qa-list__q').off('click.qa').on('click.qa', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
+//   // 既存のクリックを外して、名前空間付きで1回だけバインド
+//   $('.p-qa-list__q').off('click.qa').on('click.qa', function(e) {
+//     e.preventDefault();
+//     e.stopPropagation();
 
-    const $q = $(this);
-    const $a = $q.next('.p-qa-list__a');
+//     const $q = $(this);
+//     const $a = $q.next('.p-qa-list__a');
 
-    // 連打でアニメがキューに溜まってガタつくのを防ぐ
-    if ($a.is(':visible')) {
-      $a.stop(true, true).slideUp(200);
-      $q.removeClass('active');
-    } else {
-      $a.stop(true, true).slideDown(200);
-      $q.addClass('active');
-    }
-  });
+//     // 連打でアニメがキューに溜まってガタつくのを防ぐ
+//     if ($a.is(':visible')) {
+//       $a.stop(true, true).slideUp(200);
+//       $q.removeClass('active');
+//     } else {
+//       $a.stop(true, true).slideDown(200);
+//       $q.addClass('active');
+//     }
+//   });
 
-  // // 答えをクリックしても閉じる
-  $('.p-qa-list__a').on('click', function() {
-    const $answer = $(this);
-    const $question = $answer.prev('.p-qa-list__q');
-    $answer.slideUp();
-    $question.removeClass('active');
-  });
+//   // // 答えをクリックしても閉じる
+//   $('.p-qa-list__a').on('click', function() {
+//     const $answer = $(this);
+//     const $question = $answer.prev('.p-qa-list__q');
+//     $answer.slideUp();
+//     $question.removeClass('active');
+//   });
 
-  // -----------------------------------
-  // スライダー
-  // -----------------------------------
- $(".slider").slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  });
+//   // -----------------------------------
+//   // スライダー
+//   // -----------------------------------
+//  $(".slider").slick({
+//     infinite: true,
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     responsive: [
+//       {
+//         breakpoint: 768,
+//         settings: {
+//           slidesToShow: 1,
+//         },
+//       },
+//     ],
+//   });
 
   // -----------------------------------
   // トップへ戻るボタン・お問い合わせボタン

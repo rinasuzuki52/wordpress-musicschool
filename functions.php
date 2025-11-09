@@ -52,6 +52,11 @@ function add_files()
   wp_enqueue_script('slick-script', get_theme_file_uri('/js/slick.min.js'), array('jquery'), NULL, true);
   wp_enqueue_script('common-script');
 
+  // トップページのJS
+  if (is_front_page()) {
+    wp_enqueue_script('top-script', get_theme_file_uri('/js/top.js'), array('jquery', 'slick-script'), $now, true);
+  }
+
 }
 add_action('wp_enqueue_scripts', 'add_files');
 
