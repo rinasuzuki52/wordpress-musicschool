@@ -43,7 +43,7 @@ function add_files()
   wp_deregister_script('jquery');
 
   // jQueryの読み込み
-  wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', "", NULL, true);
+  wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', array(), NULL, true);
 
   //JS登録
   wp_register_script('common-script', get_theme_file_uri('/js/main.js'), array('jquery'), $now, true);
