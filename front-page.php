@@ -122,8 +122,13 @@
       生徒さんたちの声
     </h2>
 
+<<<<<<< HEAD
     <div class="p-voice__slider p-voice-slider swiper">
       <div class="p-voice-slider__cards swiper-wrapper">
+=======
+    <div class="swiper p-voice__slider p-voice-slider">
+      <div class="swiper-wrapper">
+>>>>>>> 1309562 (swiperへ変更)
         <?php
         $args = array(
           'post_type' => 'result',
@@ -133,8 +138,13 @@
         if ($the_query->have_posts()) :
           while ($the_query->have_posts()) : $the_query->the_post();
         ?>
+<<<<<<< HEAD
         <div class="p-voice-slider__card p-slider-card swiper-slide">
           <a href="<?php the_permalink(); ?>">
+=======
+        <div class="swiper-slide">
+          <a href="<?php the_permalink(); ?>" class="p-voice-slider__card p-slider-card">
+>>>>>>> 1309562 (swiperへ変更)
             <div class="p-slider-card__img">
               <?php if (has_post_thumbnail()) : ?>
                 <?php the_post_thumbnail(); ?>
