@@ -116,44 +116,54 @@
             </div>
         </section>
         <!-- voice -->
-        <section class="p-top__voice p-top-voice">
-            <div class="p-top-voice__inner l-inner">
-                <h2 class="p-top-voice__title c-title">
-                    生徒さんたちの声
-                </h2>
-                    <div class="p-voice__slider p-voice-slider slider">
-                        <?php
-                        $args = array(
-                            'post_type' => 'result',
-                            'posts_per_page' => 6,
-                        );
-                        $the_query = new WP_Query($args);
-                        if ($the_query->have_posts()) :
-                            while ($the_query->have_posts()) : $the_query->the_post();
-                        ?>
-                            <a href="<?php the_permalink(); ?>" class="p-voice-slider__card p-slider-card">
-                            <div class="p-slider-card__img">
-                                <?php if (has_post_thumbnail()) : ?>
-                                <?php the_post_thumbnail(); ?>
-                                <?php else : ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="No image">
-                                <?php endif; ?>
-                            </div>
-                            <div class="p-slider-card__name">
-                                <h3><?php the_field('job'); ?>&emsp;<?php the_field('name'); ?>さん</h3>
-                            </div>
-                            <div class="p-slider-card__comment">
-                                <p><?php echo wp_trim_words(get_the_content(), 42, '...'); ?></p>
-                            </div>
-                            </a>
-                        <?php
-                            endwhile;
-                        endif;
-                        wp_reset_postdata();
-                        ?>
-                    </div>
+<section class="p-top__voice p-top-voice">
+  <div class="p-top-voice__inner l-inner">
+    <h2 class="p-top-voice__title c-title">
+      生徒さんたちの声
+    </h2>
+
+    <div class="swiper p-voice__slider p-voice-slider">
+      <div class="swiper-wrapper">
+        <?php
+        $args = array(
+          'post_type' => 'result',
+          'posts_per_page' => 6,
+        );
+        $the_query = new WP_Query($args);
+        if ($the_query->have_posts()) :
+          while ($the_query->have_posts()) : $the_query->the_post();
+        ?>
+        <div class="swiper-slide">
+          <a href="<?php the_permalink(); ?>" class="p-voice-slider__card p-slider-card">
+            <div class="p-slider-card__img">
+              <?php if (has_post_thumbnail()) : ?>
+                <?php the_post_thumbnail(); ?>
+              <?php else : ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="No image">
+              <?php endif; ?>
             </div>
-        </section>
+            <div class="p-slider-card__name">
+              <h3><?php the_field('job'); ?>&emsp;<?php the_field('name'); ?>さん</h3>
+            </div>
+            <div class="p-slider-card__comment">
+              <p><?php echo wp_trim_words(get_the_content(), 42, '...'); ?></p>
+            </div>
+          </a>
+        </div>
+        <?php
+          endwhile;
+        endif;
+        wp_reset_postdata();
+        ?>
+      </div><!-- /.swiper-wrapper -->
+
+      <!-- Swiperナビゲーション（後で追加予定） -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div><!-- /.swiper -->
+  </div><!-- /.p-top-voice__inner -->
+</section>
+
         <!-- process -->
          <section class="p-top__process p-top-process">
             <div class="p-top-process__inner l-inner">
