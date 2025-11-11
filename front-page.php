@@ -115,7 +115,7 @@
                 </div>
             </div>
         </section>
-        <!-- voice -->
+<!-- voice -->
 <section class="p-top__voice p-top-voice">
   <div class="p-top-voice__inner l-inner">
     <h2 class="p-top-voice__title c-title">
@@ -126,12 +126,12 @@
       <div class="p-voice-slider__cards swiper-wrapper">
         <?php
         $args = array(
-          'post_type' => 'result',
-          'posts_per_page' => 6,
+            'post_type' => 'result',
+            'posts_per_page' => 6,
         );
         $the_query = new WP_Query($args);
         if ($the_query->have_posts()) :
-          while ($the_query->have_posts()) : $the_query->the_post();
+            while ($the_query->have_posts()) : $the_query->the_post();
         ?>
         <div class="p-voice-slider__card p-slider-card swiper-slide">
           <a href="<?php the_permalink(); ?>">
@@ -150,20 +150,21 @@
             </div>
           </a>
         </div>
-        <?php
-          endwhile;
+         <?php
+            endwhile;
         endif;
         wp_reset_postdata();
         ?>
       </div><!-- /.swiper-wrapper -->
+     
     </div><!-- /.swiper -->
-    <!-- Swiperナビゲーション（後で追加予定） -->
-       <div class="swiper-button-prev">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/top/arrow-l.svg" alt="前へ">
-        </div>
-        <div class="swiper-button-next">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/top/arrow-r.svg" alt="次へ">
-        </div>
+    <!-- Swiperナビゲーション -->
+    <div class="swiper-button-prev">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/top/arrow-l.svg" alt="前へ">
+    </div>
+    <div class="swiper-button-next">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/top/arrow-r.svg" alt="次へ">
+    </div>
   </div><!-- /.p-top-voice__inner -->
 </section>
 

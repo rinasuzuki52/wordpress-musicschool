@@ -1193,9 +1193,9 @@ c-side-title
 .p-voice-slider {
   margin-top: 2.25rem;
   width: 100%;
+  overflow: hidden;
   position: relative;
   align-items: center;
-  overflow: visible;
 }
 @media (max-width: 767px) {
   .p-voice-slider {
@@ -1203,18 +1203,8 @@ c-side-title
   }
 }
 
-.p-voice-slider__arrow-l, .p-voice-slider__arrow-r {
-  position: absolute;
-  top: 43%;
-  left: -0.625rem;
-  transform: translateY(-50%);
-  z-index: 100;
-  width: 1.875rem;
-}
-
 .p-voice-slider__cards {
   width: 56.875rem;
-  display: flex;
   overflow: hidden;
 }
 @media (max-width: 767px) {
@@ -1296,7 +1286,7 @@ c-side-title
 .swiper-button-next {
   position: absolute;
   top: 37%;
-  z-index: 200;
+  z-index: 300;
   width: 1.8125rem;
   height: 2.5rem;
   cursor: pointer;
