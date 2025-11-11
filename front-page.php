@@ -115,58 +115,58 @@
                 </div>
             </div>
         </section>
-<!-- voice -->
-<section class="p-top__voice p-top-voice">
-  <div class="p-top-voice__inner l-inner">
-    <h2 class="p-top-voice__title c-title">
-      生徒さんたちの声
-    </h2>
 
-    <div class="p-voice__slider p-voice-slider swiper">
-      <div class="p-voice-slider__cards swiper-wrapper">
-        <?php
-        $args = array(
-            'post_type' => 'result',
-            'posts_per_page' => 6,
-        );
-        $the_query = new WP_Query($args);
-        if ($the_query->have_posts()) :
-            while ($the_query->have_posts()) : $the_query->the_post();
-        ?>
-        <div class="p-voice-slider__card p-slider-card swiper-slide">
-          <a href="<?php the_permalink(); ?>">
-            <div class="p-slider-card__img">
-              <?php if (has_post_thumbnail()) : ?>
-                <?php the_post_thumbnail(); ?>
-              <?php else : ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="No image">
-              <?php endif; ?>
+        <!-- voice -->
+        <section class="p-top__voice p-top-voice">
+        <div class="p-top-voice__inner l-inner">
+            <h2 class="p-top-voice__title c-title">
+            生徒さんたちの声
+            </h2>
+
+            <div class="p-voice__slider p-voice-slider swiper">
+            <div class="p-voice-slider__cards swiper-wrapper">
+                <?php
+                $args = array(
+                    'post_type' => 'result',
+                    'posts_per_page' => 6,
+                );
+                $the_query = new WP_Query($args);
+                if ($the_query->have_posts()) :
+                    while ($the_query->have_posts()) : $the_query->the_post();
+                ?>
+                <div class="p-voice-slider__card p-slider-card swiper-slide">
+                <a href="<?php the_permalink(); ?>">
+                    <div class="p-slider-card__img">
+                    <?php if (has_post_thumbnail()) : ?>
+                        <?php the_post_thumbnail(); ?>
+                    <?php else : ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="No image">
+                    <?php endif; ?>
+                    </div>
+                    <div class="p-slider-card__name">
+                    <h3><?php the_field('job'); ?>&emsp;<?php the_field('name'); ?>さん</h3>
+                    </div>
+                    <div class="p-slider-card__comment">
+                    <p><?php echo wp_trim_words(get_the_content(), 42, '...'); ?></p>
+                    </div>
+                </a>
+                </div>
+                <?php
+                    endwhile;
+                endif;
+                wp_reset_postdata();
+                ?>
+            </div>     
             </div>
-            <div class="p-slider-card__name">
-              <h3><?php the_field('job'); ?>&emsp;<?php the_field('name'); ?>さん</h3>
+            <!-- Swiperナビゲーション -->
+            <div class="swiper-button-prev">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/top/arrow-l.svg" alt="前へ">
             </div>
-            <div class="p-slider-card__comment">
-              <p><?php echo wp_trim_words(get_the_content(), 42, '...'); ?></p>
+            <div class="swiper-button-next">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/top/arrow-r.svg" alt="次へ">
             </div>
-          </a>
         </div>
-         <?php
-            endwhile;
-        endif;
-        wp_reset_postdata();
-        ?>
-      </div><!-- /.swiper-wrapper -->
-     
-    </div><!-- /.swiper -->
-    <!-- Swiperナビゲーション -->
-    <div class="swiper-button-prev">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/top/arrow-l.svg" alt="前へ">
-    </div>
-    <div class="swiper-button-next">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/top/arrow-r.svg" alt="次へ">
-    </div>
-  </div><!-- /.p-top-voice__inner -->
-</section>
+        </section>
 
         <!-- process -->
          <section class="p-top__process p-top-process">
