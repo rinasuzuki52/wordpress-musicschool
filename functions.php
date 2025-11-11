@@ -28,37 +28,109 @@ add_action('after_setup_theme', 'custom_theme_setup');
 //ファイル読み込み
 // --------------------------------------------------
 
-function add_files()
-{
-  $now = date('YmdHis');
+// --------------------------------------------------
+// ファイル読み込み（Swiper + top.js対応）
+// --------------------------------------------------
+function add_files() {
+  $now = date('YmdHis'); // キャッシュ対策（更新反映用）
 
-  // css登録
-  wp_register_style('common-style', get_theme_file_uri('/css/style.css'), array(), $now);
+  // -----------------------------------
+  // CSS
+  // -----------------------------------
+  // Swiper CSS（CDN）
+  wp_enqueue_style(
+    'swiper-css',
+    'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
+    array(),
+    null
+  );
 
   // 共通CSS
-  wp_enqueue_style('slick-style', get_theme_file_uri('/css/slick.css'), array(), NULL);
-  wp_enqueue_style('common-style');
+  wp_enqueue_style(
+    'common-style',
+    get_theme_file_uri('/css/style.css'),
+    array('swiper-css'),
+    $now
+  );
 
-  // WordPress提供のjquery.jsを読み込まない
+  // -----------------------------------
+  // JS
+  // -----------------------------------
+  // WordPressのデフォルトjQueryを読み込まない
   wp_deregister_script('jquery');
 
-  // jQueryの読み込み
-  wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', array(), NULL, true);
+  // 最新のjQueryをCDNから読み込み
+  wp_enqueue_script(
+    'jquery',
+    'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js',
+    array(),
+    null,
+    true
+  );
 
-  //JS登録
-  wp_register_script('common-script', get_theme_file_uri('/js/main.js'), array('jquery'), $now, true);
+  // Swiper JS（CDN）
+  wp_enqueue_script(
+    'swiper-js',
+    'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+    array(),
+    null,
+    true
+  );
 
-  // 共通のJS
-  wp_enqueue_script('slick-script', get_theme_file_uri('/js/slick.min.js'), array('jquery'), NULL, true);
-  wp_enqueue_script('common-script');
-
-  // トップページのJS
+  // トップページ専用 top.js（Swiperより後で読み込み）
   if (is_front_page()) {
-    wp_enqueue_script('top-script', get_theme_file_uri('/js/top.js'), array('jquery', 'slick-script'), $now, true);
+    wp_enqueue_script(
+      'top-script',
+      get_theme_file_uri('/js/top.js'),
+      array('swiper-js', 'jquery'),
+      $now,
+      true
+    );
   }
 
+  // 共通 main.js
+  wp_enqueue_script(
+    'common-script',
+    get_theme_file_uri('/js/main.js'),
+    array('swiper-js', 'jquery'),
+    $now,
+    true
+  );
 }
 add_action('wp_enqueue_scripts', 'add_files');
+
+
+// function add_files()
+// {
+//   $now = date('YmdHis');
+
+//   // css登録
+//   wp_register_style('common-style', get_theme_file_uri('/css/style.css'), array(), $now);
+
+//   // 共通CSS
+//   wp_enqueue_style('slick-style', get_theme_file_uri('/css/slick.css'), array(), NULL);
+//   wp_enqueue_style('common-style');
+
+//   // WordPress提供のjquery.jsを読み込まない
+//   wp_deregister_script('jquery');
+
+//   // jQueryの読み込み
+//   wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', array(), NULL, true);
+
+//   //JS登録
+//   wp_register_script('common-script', get_theme_file_uri('/js/main.js'), array('jquery'), $now, true);
+
+//   // 共通のJS
+//   wp_enqueue_script('slick-script', get_theme_file_uri('/js/slick.min.js'), array('jquery'), NULL, true);
+//   wp_enqueue_script('common-script');
+
+//   // トップページのJS
+//   if (is_front_page()) {
+//     wp_enqueue_script('top-script', get_theme_file_uri('/js/top.js'), array('jquery', 'slick-script'), $now, true);
+//   }
+
+// }
+// add_action('wp_enqueue_scripts', 'add_files');
 
 // --------------------------------------------------
 //1ページに表示する記事数指定

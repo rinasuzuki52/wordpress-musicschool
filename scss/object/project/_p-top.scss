@@ -334,8 +334,8 @@
     margin-top: rem(36);
     width: 100%;
     position: relative;
-    display: block;
     align-items: center;
+    overflow: visible;
     @include sp {
        margin-top: rem(39);
     }
@@ -352,6 +352,8 @@
 
 .p-voice-slider__cards {
     width: rem(910);
+    display: flex;
+    overflow: hidden;
     @include sp {
         width: 100%;
     }
@@ -364,7 +366,6 @@
 .p-slider-card {
     width: rem(270);
     margin-inline: rem(17.5);
-    overflow: hidden;
     @include sp {
         width: 100%;
         margin-inline: 0;
@@ -424,78 +425,65 @@
     }
 }
 
+
+
+
 // 矢印
- .slick-arrow {
+// 矢印共通
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 37%;
+    z-index: 200;
     width: rem(29);
     height: rem(40);
-    position: absolute;
-    z-index: 2;
-    background-size: contain;
-    background-repeat: no-repeat;
-    text-indent: -9999px;
-    color: transparent;
-  }
-  .slick-next {
-    top: 37%;
-    right: rem(-28);
-    background-image: url(https://rina-suzuki.com/musicschool/wp-content/uploads/2025/10/arrow-r.svg) !important;
-    &:hover {
-        opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // Swiperデフォルトの矢印（疑似要素）を非表示
+    &::after {
+      display: none;
     }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover img {
+      opacity: 0.7;
+    }
+  }
+
+  // 右矢印
+  .swiper-button-next {
+    right: rem(-28);
+
     @include sp {
       top: 36%;
       right: rem(4);
-      background-image: url(https://rina-suzuki.com/musicschool/wp-content/uploads/2025/10/arrow-r.svg) !important;
+      width: rem(20);
+      height: rem(28);
     }
   }
-  .slick-prev {
-    top: 37%;
+
+  // 左矢印
+  .swiper-button-prev {
     left: rem(-28);
-    background-image: url(https://rina-suzuki.com/musicschool/wp-content/uploads/2025/10/arrow-l.svg) !important;
-    transition: all .3s;
-    &:hover {
-        opacity: 0.7;
-    }
+
     @include sp {
       top: 36%;
       left: rem(4);
-      background-image: url(https://rina-suzuki.com/musicschool/wp-content/uploads/2025/10/arrow-l.svg) !important;
+      width: rem(20);
+      height: rem(28);
     }
   }
 
-
-// .slick-prev,
-// .slick-next {
-//   position: absolute;
-//   top: rem(145);
-//   width: rem(30);
-//   height: auto;
-//   z-index: 100 !important;
-//   transform: translateY(-50%);
-//   cursor: pointer;
-//   transition: all .3s;
-//   &:hover {
-//     opacity: 0.7;
-// }
-//   @include sp {
-//     top: 41%;
-//   }
-// }
-
-// .slick-prev {
-//     background-image: url("https://rina-suzuki.com/musicschool/wp-content/uploads/2025/10/arrow-l.svg");
-//   left:rem(-30);
-//   @include sp {
-//     left: 0%;
-//   }
-// }
-
-// .slick-next {
-//   right: rem(-30);
-//   @include sp {
-//     right: 0%;
-//   }
-// }
 
 
 

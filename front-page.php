@@ -122,8 +122,8 @@
       生徒さんたちの声
     </h2>
 
-    <div class="swiper p-voice__slider p-voice-slider">
-      <div class="swiper-wrapper">
+    <div class="p-voice__slider p-voice-slider swiper">
+      <div class="p-voice-slider__cards swiper-wrapper">
         <?php
         $args = array(
           'post_type' => 'result',
@@ -133,8 +133,8 @@
         if ($the_query->have_posts()) :
           while ($the_query->have_posts()) : $the_query->the_post();
         ?>
-        <div class="swiper-slide">
-          <a href="<?php the_permalink(); ?>" class="p-voice-slider__card p-slider-card">
+        <div class="p-voice-slider__card p-slider-card swiper-slide">
+          <a href="<?php the_permalink(); ?>">
             <div class="p-slider-card__img">
               <?php if (has_post_thumbnail()) : ?>
                 <?php the_post_thumbnail(); ?>
@@ -156,11 +156,14 @@
         wp_reset_postdata();
         ?>
       </div><!-- /.swiper-wrapper -->
-
-      <!-- Swiperナビゲーション（後で追加予定） -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
     </div><!-- /.swiper -->
+    <!-- Swiperナビゲーション（後で追加予定） -->
+       <div class="swiper-button-prev">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/top/arrow-l.svg" alt="前へ">
+        </div>
+        <div class="swiper-button-next">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/top/arrow-r.svg" alt="次へ">
+        </div>
   </div><!-- /.p-top-voice__inner -->
 </section>
 
