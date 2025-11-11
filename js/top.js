@@ -38,22 +38,23 @@ $(function () {
   if (document.querySelector('.p-voice-slider')) {
   const voiceSlider = new Swiper('.p-voice-slider', {
     loop: true,
-    slidesPerView: 'auto', // ← 幅はCSSで指定するので'auto'
+
+    // SP（767px以下）：1枚全幅（ベース設定）
+    slidesPerView: 1,
+
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+
+    // 768px以上の場合に上書き
     breakpoints: {
-      // PC（768px以上）：CSS側で3枚分の幅を調整
       768: {
-        slidesPerView: 'auto',
-      },
-      // SP（767px以下）：1枚全幅
-      0: {
-        slidesPerView: 1,
+        slidesPerView: 'auto', // PCで3枚表示（CSS側で幅調整）
       },
     },
   });
 }
+
 
 });

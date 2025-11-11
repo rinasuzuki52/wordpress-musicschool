@@ -1177,8 +1177,8 @@ c-side-title
 }
 
 .p-top-voice__inner {
-  max-width: 64.375rem;
-  padding-inline: 3.75rem;
+  position: relative;
+  width: 60.9375rem;
 }
 @media (max-width: 767px) {
   .p-top-voice__inner {
@@ -1194,8 +1194,6 @@ c-side-title
   margin-top: 2.25rem;
   width: 100%;
   overflow: hidden;
-  position: relative;
-  align-items: center;
 }
 @media (max-width: 767px) {
   .p-voice-slider {
@@ -1204,8 +1202,7 @@ c-side-title
 }
 
 .p-voice-slider__cards {
-  width: 56.875rem;
-  overflow: hidden;
+  width: 57.1875rem;
 }
 @media (max-width: 767px) {
   .p-voice-slider__cards {
@@ -1285,7 +1282,7 @@ c-side-title
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: 37%;
+  top: 55%;
   z-index: 300;
   width: 1.8125rem;
   height: 2.5rem;
@@ -1312,7 +1309,7 @@ c-side-title
 }
 
 .swiper-button-next {
-  right: -1.75rem;
+  right: 2rem;
 }
 @media (max-width: 767px) {
   .swiper-button-next {
@@ -1324,7 +1321,7 @@ c-side-title
 }
 
 .swiper-button-prev {
-  left: -1.75rem;
+  left: 2rem;
 }
 @media (max-width: 767px) {
   .swiper-button-prev {

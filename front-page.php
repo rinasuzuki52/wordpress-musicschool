@@ -156,15 +156,15 @@
                 endif;
                 wp_reset_postdata();
                 ?>
-            </div>     
-            </div>
-            <!-- Swiperナビゲーション -->
+            </div>   
+        </div>
+        <!-- Swiperナビゲーション -->
             <div class="swiper-button-prev">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/top/arrow-l.svg" alt="前へ">
             </div>
             <div class="swiper-button-next">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/top/arrow-r.svg" alt="次へ">
-            </div>
+            </div> 
         </div>
         </section>
 

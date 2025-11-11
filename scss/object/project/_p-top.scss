@@ -315,8 +315,8 @@
 }
 
 .p-top-voice__inner {
-    max-width: rem(1030);
-    padding-inline: rem(60);
+    position: relative;
+    width: rem(975);
     @include sp {
         padding-inline: rem(20);
     }
@@ -333,16 +333,13 @@
     margin-top: rem(36);
     width: 100%;
     overflow: hidden;
-    position: relative;
-    align-items: center;
     @include sp {
        margin-top: rem(39);
     }
 }
 
 .p-voice-slider__cards {
-    width: rem(910);
-    overflow: hidden;
+    width: rem(915);
     @include sp {
         width: 100%;
     }
@@ -422,7 +419,7 @@
   .swiper-button-prev,
   .swiper-button-next {
     position: absolute;
-    top: 37%;
+    top: 55%;
     z-index: 300;
     width: rem(29);
     height: rem(40);
@@ -451,7 +448,7 @@
 
   // 右矢印
   .swiper-button-next {
-    right: rem(-28);
+    right: rem(32);
     @include sp {
       top: 36%;
       right: rem(4);
@@ -462,7 +459,7 @@
 
   // 左矢印
   .swiper-button-prev {
-    left: rem(-28);
+    left: rem(32);
     @include sp {
       top: 36%;
       left: rem(4);
