@@ -1203,6 +1203,7 @@ c-side-title
 
 .p-voice-slider__cards {
   width: 57.1875rem;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .p-voice-slider__cards {

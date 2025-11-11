@@ -340,6 +340,7 @@
 
 .p-voice-slider__cards {
     width: rem(915);
+    width: 100%;
     @include sp {
         width: 100%;
     }
