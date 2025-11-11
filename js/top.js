@@ -35,19 +35,24 @@ $(function () {
   // -----------------------------------
   // スライダー
   // -----------------------------------
-  if ($('.slider').length) {
-  $('.slider').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        },
+  if (document.querySelector('.p-voice-slider')) {
+  const voiceSlider = new Swiper('.p-voice-slider', {
+    loop: true,
+    slidesPerView: 'auto', // ← 幅はCSSで指定するので'auto'
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      // PC（768px以上）：CSS側で3枚分の幅を調整
+      768: {
+        slidesPerView: 'auto',
       },
-    ],
+      // SP（767px以下）：1枚全幅
+      0: {
+        slidesPerView: 1,
+      },
+    },
   });
 }
 
