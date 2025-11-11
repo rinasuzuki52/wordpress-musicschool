@@ -38,7 +38,6 @@ $(function () {
   if (document.querySelector('.p-voice-slider')) {
   const voiceSlider = new Swiper('.p-voice-slider', {
     loop: true,
-
     // SP（767px以下）：1枚全幅（ベース設定）
     slidesPerView: 1,
 
