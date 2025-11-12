@@ -319,6 +319,7 @@
     width: rem(975);
     @include sp {
         padding-inline: rem(20);
+        width: 100%;
     }
 }
 
@@ -352,10 +353,10 @@
 
 .p-slider-card {
     width: rem(270);
-    margin-inline: rem(17.5);
+    margin-right: rem(35);
     @include sp {
         width: 100%;
-        margin-inline: 0;
+        margin-right: 0;
     }
     &:hover {
         .p-slider-card__img img {
