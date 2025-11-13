@@ -41,6 +41,7 @@
     font-size: rem(15);
     line-height: calc(33 / 15);
     font-weight: 700;
+    margin-left: rem(10);
 }
 
 // ==========================================================================
@@ -107,7 +108,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    column-gap: rem(16);
+    column-gap: rem(13);
     @include sp {
         display: block;
         width: rem(300);
@@ -160,6 +161,10 @@
     }
 }
 
+.p-header-nav__lists li:last-child a {
+    font-size: rem(15);
+}
+
 
 
 
@@ -187,7 +192,7 @@
 .p-header-nav__lists {
   li {
     &:last-child {
-      height: rem(45); // ←お好みの高さに変更
+      height: rem(45);
       justify-content: center;
       align-items: center;
       a {
