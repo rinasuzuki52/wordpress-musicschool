@@ -146,22 +146,3 @@ function add_file_types_to_uploads($file_types){
   return array_merge($file_types, $new_filetypes);
 }
 add_filter('upload_mimes', 'add_file_types_to_uploads');
-
-
-// --------------------------------------------------
-// JSへテーマURLを渡す
-// --------------------------------------------------
-function my_enqueue_scripts() {
-  wp_enqueue_script(
-    'main-js',
-    get_theme_file_uri('/js/main.js'),
-    array('jquery'),
-    null,
-    true
-  );
-
-  wp_localize_script('main-js', 'themeVars', array(
-    'themeUrl' => get_template_directory_uri()
-  ));
-}
-add_action('wp_enqueue_scripts', 'my_enqueue_scripts');

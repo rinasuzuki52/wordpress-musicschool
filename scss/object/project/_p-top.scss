@@ -430,21 +430,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     // Swiperデフォルトの矢印（疑似要素）を非表示
     &::after {
       display: none;
     }
-
     img {
       width: 100%;
       height: auto;
       display: block;
       transition: opacity 0.3s ease;
     }
-
     &:hover img {
       opacity: 0.7;
+    }
+    @include sp {
+        top: 52%;
+        width: rem(30);
     }
   }
 
@@ -452,10 +453,7 @@
   .swiper-button-next {
     right: rem(-12);
     @include sp {
-      top: 36%;
-      right: rem(4);
-      width: rem(20);
-      height: rem(28);
+      right: rem(20);
     }
   }
 
@@ -463,10 +461,7 @@
   .swiper-button-prev {
     left: rem(-12);
     @include sp {
-      top: 36%;
-      left: rem(4);
-      width: rem(20);
-      height: rem(28);
+      left: rem(20);
     }
   }
 
@@ -805,7 +800,7 @@
     line-height: calc(30 / 17);
     text-align: right;
     @include sp {
-        padding-top: rem(6);
+        margin-top: rem(6);
     }
 }
 
