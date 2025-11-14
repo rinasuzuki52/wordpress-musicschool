@@ -32,6 +32,11 @@
     width: 100%;
 }
 
+.p-details__image img {
+    aspect-ratio: 880 / 400;
+    object-fit: cover;
+}
+
 .p-details__category {
     min-width: rem(100);
 }
@@ -62,10 +67,12 @@
     display: flex;
     margin-top: rem(55);
     column-gap: rem(40);
+    padding-bottom: rem(8);
     @include sp {
         margin-top: rem(21);
         flex-direction: column;
         row-gap: rem(26);
+        margin-bottom: 0;
     }
 }
 

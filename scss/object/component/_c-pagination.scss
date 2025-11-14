@@ -7,20 +7,20 @@ c-pagination
 -----------------*/
 
 .c-pager {
-    margin-top: rem(72);
+    margin-top: rem(69);
   .wp-pagenavi {
     width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: rem(10);
+    column-gap: rem(7);
     @include sp {
-      column-gap: rem(5);
+      column-gap: rem(2);
     }
     .current,
     a {
-      width: rem(50);
+      width: rem(260);
       height: rem(50);
       font-size: rem(18);
       line-height: 1;

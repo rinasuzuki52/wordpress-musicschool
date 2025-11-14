@@ -32,7 +32,7 @@
     height: 100%;
     flex-wrap: nowrap;            // 折り返さない
     white-space: nowrap;          // テキストも折り返さない
-    column-gap: rem(17);
+    column-gap: rem(20);
     align-items: center;
     margin: 0 auto;
     @include sp {

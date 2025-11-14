@@ -30,7 +30,7 @@
                 <h1 class="p-details__title">
                     <?php the_title(); ?>
                 </h1>
-                <time datetime="the_time('Y-m-d')"><?php the_time('Y.m.d'); ?></time>
+                <time datetime="the_time('Y-m-d')" class="p-details__time"><?php the_time('Y.m.d'); ?></time>
                 <div class="p-details__tablearea">
                     <table class="p-details__table">
                         <tbody>
