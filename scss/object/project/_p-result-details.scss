@@ -35,6 +35,9 @@
 .p-details__image img {
     aspect-ratio: 880 / 400;
     object-fit: cover;
+    @include sp {
+        aspect-ratio: 335 / 236;
+    }
 }
 
 .p-details__category {
@@ -73,6 +76,7 @@
         flex-direction: column;
         row-gap: rem(26);
         margin-bottom: 0;
+        padding-bottom: 0;
     }
 }
 

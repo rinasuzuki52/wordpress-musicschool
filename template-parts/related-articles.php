@@ -140,8 +140,8 @@ if ( ! empty($terms) && ! is_wp_error($terms) ) :
       ?>
       <a href="<?php the_permalink(); ?>" class="p-related__item">
         <div class="p-related__wrap">
-          <div class="p-related__right p-related__right2">
-            <div class="p-related__image2">
+          <div class="p-related__right">
+            <div class="p-related__image">
               <?php if ( has_post_thumbnail() ) : ?>
                 <?php the_post_thumbnail('medium'); ?>
               <?php else : ?>
@@ -152,7 +152,7 @@ if ( ! empty($terms) && ! is_wp_error($terms) ) :
               <?php echo esc_html($term_name); ?>
             </div>
           </div>
-          <div class="p-related__textarea p-related__textarea2">
+          <div class="p-related__textarea">
             <h3 class="p-related__title">
               <?php echo esc_html( wp_trim_words( get_the_title(), 32, '...' ) ); ?>
             </h3>

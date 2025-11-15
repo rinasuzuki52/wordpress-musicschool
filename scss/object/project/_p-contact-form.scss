@@ -96,7 +96,7 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    row-gap: rem(20);
+    row-gap: rem(21);
     .wpcf7-list-item {
     margin: 0;
   }
@@ -105,11 +105,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    row-gap: rem(9);
-          
-    @include sp {
-      row-gap: rem(13);
-    }
+    row-gap: rem(21);
 }
 label {
     cursor: pointer;
@@ -162,9 +158,12 @@ label {
 }
 
 .p-form__textarea {
+  box-sizing: border-box;
     width: 100%;
     background-color: $font-color2;
     min-height: rem(300);
+    height: rem(300);
+    overflow-y: auto;
     resize: vertical;
     padding: rem(13) rem(20);
     font-size: rem(15);
@@ -180,7 +179,10 @@ label {
 .p-form__submit {
     display: flex;
     justify-content: center;
-    margin-top: rem(50);
+    margin-top: rem(20);
+    @include sp {
+      margin-top: rem(37);
+    }
 }
 
 .p-form__btn {
@@ -240,4 +242,8 @@ label {
     font-size: rem(16);
     line-height: 1.5;
   }
+}
+
+.wpcf7-spinner {
+  display: none;
 }
