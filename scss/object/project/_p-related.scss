@@ -59,7 +59,7 @@
 }
 
 .p-related__right2 {
-    width: rem(200);
+    width: 30%;
     @include sp {
         width: rem(160);
     }
@@ -73,7 +73,7 @@
 }
 
 .p-related__image2 {
-    width: rem(200);
+    width: 100%;
     @include sp {
         width: 100%;
     }
@@ -83,7 +83,7 @@
     aspect-ratio: 260 / 183;
     object-fit: cover;
     @include sp {
-        aspect-ratio: 160 / 113;
+        aspect-ratio: 160 / 110;
     }
 }
 
